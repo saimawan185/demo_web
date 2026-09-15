@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import { salon, suggestedHours } from "@/lib/data";
+import { salon, hours } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact IRIS Salon & Spa in Gulberg 2, Lahore. Call 0301-8467799 or visit us on Mushtaq Ahmed Gurmani Road.",
+  description: "Contact Allure Salon & Spa in F-10/2 Islamabad. Call (051) 237-0345 or visit Tariq Market.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-iris-950 py-16 md:py-24 hero-pattern">
+      <section className="bg-ink-950 hero-glow py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-gold-400 text-sm tracking-[0.2em] uppercase mb-4">Get in Touch</p>
-          <h1 className="font-display text-4xl md:text-6xl text-iris-50 font-semibold">Contact Us</h1>
-          <p className="mt-6 text-iris-300 max-w-2xl mx-auto">
-            We&apos;d love to hear from you. Call, message, or visit us in Gulberg 2.
+          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4">Get in Touch</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold">Contact Us</h1>
+          <p className="mt-6 text-ink-300 max-w-2xl mx-auto">
+            Call, WhatsApp or visit us in Tariq Market, F-10/2.
           </p>
         </div>
       </section>
@@ -24,91 +24,83 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-display text-2xl text-iris-950 font-semibold mb-8">Contact Information</h2>
-
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-iris-100 flex items-center justify-center shrink-0 text-xl">📞</div>
-                  <div>
-                    <p className="text-sm text-iris-500 uppercase tracking-wider">Phone</p>
-                    <a href={`tel:${salon.phone}`} className="text-iris-950 font-semibold hover:text-gold-600 transition-colors">
-                      {salon.phoneDisplay}
-                    </a>
-                  </div>
+              <h2 className="font-display text-2xl text-ink-950 font-semibold mb-8">Details</h2>
+              <div className="space-y-6 text-ink-800">
+                <div>
+                  <p className="text-sm text-ink-500 uppercase tracking-wider">Phone</p>
+                  <a href={`tel:${salon.phone}`} className="font-medium hover:text-rose-600 transition-colors">
+                    {salon.phoneDisplay}
+                  </a>
                 </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-iris-100 flex items-center justify-center shrink-0 text-xl">✉️</div>
-                  <div>
-                    <p className="text-sm text-iris-500 uppercase tracking-wider">Email</p>
-                    <a href={`mailto:${salon.email}`} className="text-iris-950 font-semibold hover:text-gold-600 transition-colors">
-                      {salon.email}
-                    </a>
-                  </div>
+                <div>
+                  <p className="text-sm text-ink-500 uppercase tracking-wider">Address</p>
+                  <p className="leading-relaxed">{salon.address.full}</p>
+                  <a
+                    href={salon.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-sm text-rose-600 hover:underline"
+                  >
+                    Open in Google Maps →
+                  </a>
                 </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-iris-100 flex items-center justify-center shrink-0 text-xl">📍</div>
-                  <div>
-                    <p className="text-sm text-iris-500 uppercase tracking-wider">Address</p>
-                    <p className="text-iris-800 leading-relaxed">{salon.address.full}</p>
-                    <a
-                      href={salon.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 text-sm text-gold-600 hover:underline"
-                    >
-                      Open in Google Maps →
-                    </a>
-                  </div>
+                <div>
+                  <p className="text-sm text-ink-500 uppercase tracking-wider mb-2">Hours</p>
+                  {hours.map((item) => (
+                    <p key={item.day}>
+                      <span className="font-medium">{item.day}:</span> {item.hours}
+                    </p>
+                  ))}
                 </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-iris-100 flex items-center justify-center shrink-0 text-xl">🕐</div>
-                  <div>
-                    <p className="text-sm text-iris-500 uppercase tracking-wider mb-2">Suggested Hours</p>
-                    <ul className="space-y-1 text-iris-800">
-                      {suggestedHours.map((item) => (
-                        <li key={item.day}>
-                          <span className="font-medium">{item.day}:</span> {item.hours}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div>
+                  <p className="text-sm text-ink-500 uppercase tracking-wider mb-2">Branches</p>
+                  <ul className="space-y-1">
+                    {salon.branches.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              <div className="mt-10 flex gap-4">
+              <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href={salon.social.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="gradient-gold text-iris-950 font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm"
+                  className="gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm hover:opacity-90"
                 >
                   WhatsApp
+                </a>
+                <a
+                  href={salon.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100"
+                >
+                  Facebook
                 </a>
                 <a
                   href={salon.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-iris-300 text-iris-800 font-semibold px-6 py-3 rounded-full hover:bg-iris-100 transition-colors text-sm"
+                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100"
                 >
                   Instagram
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 border border-iris-200 shadow-sm">
-              <h2 className="font-display text-2xl text-iris-950 font-semibold mb-2">Send a Message</h2>
-              <p className="text-sm text-iris-500 mb-6">Demo form — messages are not sent. Use phone or WhatsApp to book.</p>
+            <div className="bg-white p-8 border border-ink-200">
+              <h2 className="font-display text-2xl text-ink-950 font-semibold mb-2">Send a message</h2>
+              <p className="text-sm text-ink-500 mb-6">Demo form only — use phone or WhatsApp to book.</p>
               <ContactForm />
             </div>
           </div>
 
-          <div className="mt-16 rounded-2xl overflow-hidden border border-iris-200 h-80 md:h-96">
+          <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96">
             <iframe
-              title="IRIS Salon & Spa location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.0!2d74.3511772!3d31.5249055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904f96223abfd%3A0x86c7570238174a45!2sIRIS%20Salon%20%26%20Spa!5e0!3m2!1sen!2s!4v1"
+              title="Allure Salon & Spa location"
+              src={salon.mapsEmbed}
               width="100%"
               height="100%"
               style={{ border: 0 }}

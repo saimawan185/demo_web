@@ -1,68 +1,40 @@
-# IRIS Salon & Spa — Demo Website
+# Allure Salon & Spa — Demo Website
 
-A premium, responsive demo website for **IRIS Salon & Spa** in Gulberg 2, Lahore.
+Premium demo site for **Allure Salon & Spa** (F-10/2, Islamabad) — a salon with strong social presence but no dedicated website.
+
+## Live (GitHub Pages)
+
+**https://saimawan185.github.io/demo_web/**
+
+## Business details used
+
+| | |
+|--|--|
+| **Name** | Allure Salon & Spa |
+| **Address** | Street 14, Tariq Market, F-10/2, Islamabad |
+| **Phone** | (051) 237-0345 |
+| **Hours** | Daily 10:30 AM – 7:45 PM |
+| **Social** | [Facebook](https://www.facebook.com/allureislamabad/) · [Instagram](https://www.instagram.com/alluresalonspaofficial/) |
 
 ## Pages
 
-- **Home** — Hero, services preview, suggested hours, reviews, CTA
-- **About Us** — Story, values, team
-- **Services & Prices** — Full service list with dummy PKR pricing
-- **Contact** — Phone, address, map, contact form (demo)
-- **Privacy Policy**
+Home · About · Services & Prices · Contact · Privacy Policy
 
-## Suggested Hours
-
-| Days | Hours |
-|------|-------|
-| Monday – Thursday | 10:00 AM – 8:30 PM |
-| Friday – Sunday | 11:00 AM – 9:30 PM |
-
-Opens earlier on weekdays for morning appointments; extended weekend hours for peak demand.
-
-## Local Development
+## Develop locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/iris_saloon_demo/](http://localhost:3000/iris_saloon_demo/) when running locally.
+Open [http://localhost:3000/demo_web/](http://localhost:3000/demo_web/)
 
-## Live Site (GitHub Pages)
-
-**https://saimawan185.github.io/iris_saloon_demo/**
-
-## Build for Free Hosting
-
-This project uses **Next.js static export** — no server required.
+## Deploy
 
 ```bash
-npm install
 npm run build
 ```
 
-Upload the contents of the **`out/`** folder to any static host:
+Upload the `out/` folder, or push to `main` (GitHub Actions) / `gh-pages`.
 
-- **Netlify** — drag & drop the `out` folder, or connect your Git repo
-- **Vercel** — import repo (auto-detects Next.js)
-- **GitHub Pages** — upload `out` contents to `gh-pages` branch
-- **Cloudflare Pages** — connect repo or upload `out`
-- **InfinityFree / 000webhost** — upload `out` via FTP to `public_html`
-
-### GitHub Pages note
-
-If hosting on GitHub Pages with a project URL (e.g. `username.github.io/iris-salon`), set `basePath` in `next.config.ts`:
-
-```ts
-basePath: '/iris-salon',
-```
-
-## Tech Stack
-
-- Next.js 15 (App Router, static export)
-- Tailwind CSS 4
-- TypeScript
-
-## Demo Disclaimer
-
-Prices and contact form are for demonstration only. Use phone **0301-8467799** or WhatsApp to book real appointments.
+Configured with `basePath: /demo_web` for GitHub Pages project site.

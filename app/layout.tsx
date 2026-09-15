@@ -6,26 +6,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Premium Beauty Salon in Gulberg, Lahore`,
+    default: `${salon.name} | Beauty Salon in F-10, Islamabad`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "IRIS Salon & Spa — premium hairstyling, makeup, manicure, pedicure, massage & waxing in Gulberg 2, Lahore. Book your appointment today.",
-  keywords: ["salon", "spa", "Lahore", "Gulberg", "beauty", "hair", "makeup", "manicure"],
+    "Allure Salon & Spa — bridal makeup, hair, nails and spa in Tariq Market, F-10/2 Islamabad. Book your appointment today.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
           rel="stylesheet"
         />
       </head>
