@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { salon, services, reviews, hours, formatPrice, heroImage } from "@/lib/data";
+import { salon, services, reviews, hours, formatPrice, heroImage, asset } from "@/lib/data";
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -24,33 +23,31 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Full-bleed premium hero */}
-      <section className="relative min-h-[92vh] flex items-end md:items-center overflow-hidden">
-        <Image
+      {/* Tall full-bleed premium hero */}
+      <section className="relative min-h-[100svh] md:min-h-[110vh] flex items-end md:items-center overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={heroImage}
           alt="Premium beauty styling at Allure Salon & Spa"
-          fill
-          priority
-          className="object-cover object-center scale-105 animate-kenburns"
-          sizes="100vw"
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105 animate-kenburns"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/70 to-ink-950/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-ink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/92 via-ink-950/72 to-ink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-ink-950/45" />
 
-        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-          <p className="font-display text-4xl sm:text-5xl md:text-6xl text-rose-300 tracking-wide animate-rise">
+        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-28 md:py-36 lg:py-40">
+          <p className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-rose-300 tracking-wide animate-rise">
             Allure
           </p>
-          <p className="mt-1 text-xs sm:text-sm tracking-[0.35em] uppercase text-champagne-400 animate-rise delay-1">
+          <p className="mt-2 text-xs sm:text-sm tracking-[0.35em] uppercase text-champagne-400 animate-rise delay-1">
             Salon & Spa · F-10 Islamabad
           </p>
-          <h1 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-ink-50 font-medium leading-tight max-w-xl animate-rise delay-2">
+          <h1 className="mt-8 font-display text-3xl sm:text-4xl md:text-5xl text-ink-50 font-medium leading-tight max-w-xl animate-rise delay-2">
             Beauty refined for every occasion
           </h1>
-          <p className="mt-4 text-base md:text-lg text-ink-200 max-w-md leading-relaxed animate-rise delay-2">
-            Bridal glam, hair artistry and spa care in the heart of Tariq Market.
+          <p className="mt-5 text-base md:text-lg text-ink-200 max-w-lg leading-relaxed animate-rise delay-2">
+            Bridal glam, hair artistry and spa care in the heart of Tariq Market — trusted by thousands across Islamabad.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4 animate-rise delay-3">
+          <div className="mt-10 flex flex-wrap gap-4 animate-rise delay-3">
             <a
               href={salon.social.whatsapp}
               target="_blank"
@@ -69,10 +66,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Atmosphere strip — extends home length */}
+      <section className="bg-ink-950 py-10 md:py-14 border-y border-white/5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { label: "Bridal & Party", value: "Glam Looks" },
+            { label: "Open Daily", value: "10:30 – 7:45" },
+            { label: "Location", value: "F-10 Tariq Market" },
+            { label: "Community", value: "100K+ Followers" },
+          ].map((item) => (
+            <div key={item.label}>
+              <p className="font-display text-xl md:text-2xl text-rose-300">{item.value}</p>
+              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-ink-400">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Services with images */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="max-w-2xl mb-12">
+          <div className="max-w-2xl mb-14">
             <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">Services</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink-950 font-semibold">
               Crafted for every occasion
@@ -82,20 +96,16 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {featured.map((service) => (
-              <Link
-                key={service.id}
-                href="/services/"
-                className="group block"
-              >
+              <Link key={service.id} href="/services/" className="group block">
                 <div className="relative aspect-[4/5] overflow-hidden bg-ink-200">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={service.image}
                     alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/75 via-ink-950/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -110,9 +120,42 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-12">
             <Link href="/services/" className="text-ink-800 font-medium hover:text-rose-600 transition-colors">
               Full menu & packages →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About teaser with image — lengthens home */}
+      <section className="py-20 md:py-28 bg-ink-100/70">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="relative aspect-[4/5] md:aspect-[5/4] overflow-hidden bg-ink-200">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/images/spa.jpg")}
+              alt="Relaxing spa experience at Allure"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">The Allure Experience</p>
+            <h2 className="font-display text-4xl md:text-5xl text-ink-950 font-semibold leading-tight">
+              A calm studio for bridal days and everyday glow
+            </h2>
+            <p className="mt-5 text-ink-600 leading-relaxed">
+              Whether you are preparing for Mehndi and Barat or booking a facial and manicure, our F-10 team focuses on clean finishes, attentive service and looks that last through the moment.
+            </p>
+            <p className="mt-4 text-ink-600 leading-relaxed">
+              Visit us in Tariq Market or ask about bridal and spa appointments for Bahria Town Phase 6 clients.
+            </p>
+            <Link
+              href="/about/"
+              className="inline-block mt-8 gradient-rose text-white font-medium px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
+            >
+              About Allure
             </Link>
           </div>
         </div>
@@ -141,7 +184,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-ink-100/60">
+      <section className="py-16 md:py-24 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">Testimonials</p>

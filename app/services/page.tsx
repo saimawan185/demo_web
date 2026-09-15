@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { services, packages, formatPrice, salon } from "@/lib/data";
+import { services, packages, formatPrice, salon, asset } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services & Prices",
@@ -10,14 +9,12 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <Image
-          src="/images/hair.jpg"
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={asset("/images/hair.jpg")}
           alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-ink-950/75" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
@@ -35,12 +32,12 @@ export default function ServicesPage() {
             {services.map((service) => (
               <article key={service.id} className="group">
                 <div className="relative aspect-[5/4] overflow-hidden bg-ink-200">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={service.image}
                     alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
                 <div className="pt-4">

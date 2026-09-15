@@ -1,3 +1,11 @@
+/** Must match next.config.ts basePath for GitHub Pages static assets */
+export const basePath = "/demo_web";
+
+export function asset(path: string): string {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${basePath}${normalized}`;
+}
+
 export const salon = {
   name: "Allure Salon & Spa",
   tagline: "Beauty, Bridal & Wellness in F-10",
@@ -34,7 +42,7 @@ export const hours = [
   { day: "Monday – Sunday", hours: "10:30 AM – 7:45 PM" },
 ];
 
-export const heroImage = "/images/hero.jpg";
+export const heroImage = asset("/images/hero.jpg");
 
 export const services = [
   {
@@ -43,7 +51,7 @@ export const services = [
     description: "Mehndi, Barat & Walima looks crafted for lasting camera-ready glam.",
     priceFrom: 25000,
     duration: "2–3 hrs",
-    image: "/images/bridal.jpg",
+    image: asset("/images/bridal.jpg"),
   },
   {
     id: "party-makeup",
@@ -51,7 +59,7 @@ export const services = [
     description: "Evening and event makeup with soft glam or bold finishes.",
     priceFrom: 8000,
     duration: "60–90 min",
-    image: "/images/party.jpg",
+    image: asset("/images/party.jpg"),
   },
   {
     id: "hairstyling",
@@ -59,7 +67,7 @@ export const services = [
     description: "Cuts, colour consults, blowouts and occasion updos.",
     priceFrom: 2500,
     duration: "45–90 min",
-    image: "/images/hair.jpg",
+    image: asset("/images/hair.jpg"),
   },
   {
     id: "keratin",
@@ -67,7 +75,7 @@ export const services = [
     description: "Smoothing and repair treatments for healthy, shiny hair.",
     priceFrom: 12000,
     duration: "2–3 hrs",
-    image: "/images/keratin.jpg",
+    image: asset("/images/keratin.jpg"),
   },
   {
     id: "manicure",
@@ -75,7 +83,7 @@ export const services = [
     description: "Classic and gel manicures with clean, polished finishes.",
     priceFrom: 1500,
     duration: "30–45 min",
-    image: "/images/manicure.jpg",
+    image: asset("/images/manicure.jpg"),
   },
   {
     id: "pedicure",
@@ -83,7 +91,7 @@ export const services = [
     description: "Relaxing foot care with scrub, massage and polish.",
     priceFrom: 1800,
     duration: "45–60 min",
-    image: "/images/pedicure.jpg",
+    image: asset("/images/pedicure.jpg"),
   },
   {
     id: "spa",
@@ -91,7 +99,7 @@ export const services = [
     description: "Facials, glow treatments and spa rituals for skin refresh.",
     priceFrom: 4500,
     duration: "45–90 min",
-    image: "/images/spa.jpg",
+    image: asset("/images/spa.jpg"),
   },
   {
     id: "massage",
@@ -99,7 +107,7 @@ export const services = [
     description: "Relaxing body massage to unwind before events or after a long week.",
     priceFrom: 4000,
     duration: "60–90 min",
-    image: "/images/massage.jpg",
+    image: asset("/images/massage.jpg"),
   },
   {
     id: "waxing",
@@ -107,7 +115,7 @@ export const services = [
     description: "Full body and targeted waxing with gentle salon-grade products.",
     priceFrom: 1200,
     duration: "20–60 min",
-    image: "/images/waxing.jpg",
+    image: asset("/images/waxing.jpg"),
   },
 ];
 
