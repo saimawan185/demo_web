@@ -90,7 +90,7 @@ export default function ServicesPage() {
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-lift inline-block gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
+              className="btn-lift btn-shimmer inline-block gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
             >
               Book on WhatsApp
             </a>

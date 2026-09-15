@@ -67,7 +67,7 @@ export default function ContactPage() {
                   href={salon.social.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-lift gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm"
+                  className="btn-lift btn-shimmer gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm"
                 >
                   WhatsApp
                 </a>
@@ -97,7 +97,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96">
+          <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal="fade">
             <iframe
               title="Allure Salon & Spa location"
               src={salon.mapsEmbed}

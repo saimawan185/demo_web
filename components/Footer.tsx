@@ -17,11 +17,11 @@ export default function Footer() {
           <div>
             <h3 className="text-champagne-400 text-sm font-medium uppercase tracking-wider mb-4">Explore</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-rose-300 transition-colors">Home</Link></li>
-              <li><Link href="/about/" className="hover:text-rose-300 transition-colors">About Us</Link></li>
-              <li><Link href="/services/" className="hover:text-rose-300 transition-colors">Services & Prices</Link></li>
-              <li><Link href="/contact/" className="hover:text-rose-300 transition-colors">Contact</Link></li>
-              <li><Link href="/privacy/" className="hover:text-rose-300 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/" className="hover:text-rose-300 transition-all duration-300 hover:translate-x-1 inline-block">Home</Link></li>
+              <li><Link href="/about/" className="hover:text-rose-300 transition-all duration-300 hover:translate-x-1 inline-block">About Us</Link></li>
+              <li><Link href="/services/" className="hover:text-rose-300 transition-all duration-300 hover:translate-x-1 inline-block">Services & Prices</Link></li>
+              <li><Link href="/contact/" className="hover:text-rose-300 transition-all duration-300 hover:translate-x-1 inline-block">Contact</Link></li>
+              <li><Link href="/privacy/" className="hover:text-rose-300 transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</Link></li>
             </ul>
           </div>
 

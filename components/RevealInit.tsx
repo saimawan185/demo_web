@@ -3,18 +3,21 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/** Enables scroll reveals for any element with [data-reveal] */
+/** Scroll-triggered reveals for [data-reveal] elements */
 export default function RevealInit() {
   const pathname = usePathname();
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
 
     if (reduced) {
       nodes.forEach((el) => el.classList.add("is-visible"));
       return;
     }
+
+    // Reset then observe (needed on client navigations)
+    nodes.forEach((el) => el.classList.remove("is-visible"));
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,15 +28,18 @@ export default function RevealInit() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
     );
 
-    nodes.forEach((el) => {
-      el.classList.remove("is-visible");
-      observer.observe(el);
+    // Small delay so CSS initial state paints before observing
+    const id = window.requestAnimationFrame(() => {
+      nodes.forEach((el) => observer.observe(el));
     });
 
-    return () => observer.disconnect();
+    return () => {
+      window.cancelAnimationFrame(id);
+      observer.disconnect();
+    };
   }, [pathname]);
 
   return null;

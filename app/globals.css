@@ -42,6 +42,7 @@ body {
 
 .gradient-rose {
   background: linear-gradient(135deg, var(--color-rose-400), var(--color-rose-600));
+  background-size: 160% 160%;
 }
 
 .gradient-champagne {
@@ -62,11 +63,23 @@ body {
     radial-gradient(ellipse at 70% 90%, rgba(201, 123, 134, 0.1) 0%, transparent 50%);
 }
 
+/* —— Page enter —— */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 /* —— Hero entrance —— */
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(32px);
   }
   to {
     opacity: 1;
@@ -75,7 +88,7 @@ body {
 }
 
 .animate-rise {
-  animation: rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .delay-1 { animation-delay: 0.12s; opacity: 0; }
@@ -84,60 +97,117 @@ body {
 .delay-4 { animation-delay: 0.55s; opacity: 0; }
 
 @keyframes kenburns {
-  from { transform: scale(1.05); }
+  from { transform: scale(1.04); }
   to { transform: scale(1.14); }
 }
 
 .animate-kenburns {
-  animation: kenburns 22s ease-out forwards;
+  animation: kenburns 24s ease-out forwards;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-float {
+  animation: float-y 2.4s ease-in-out infinite;
+}
+
+@keyframes soft-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.9; }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes line-grow {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-line-grow {
+  transform-origin: top;
+  animation: line-grow 1s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
 }
 
 /* —— Scroll reveal system —— */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(40px);
   transition:
-    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.85s ease;
+  filter: blur(4px);
+  will-change: opacity, transform, filter;
 }
 
 [data-reveal="left"] {
-  transform: translateX(-40px);
+  transform: translateX(-48px);
 }
 
 [data-reveal="right"] {
-  transform: translateX(40px);
+  transform: translateX(48px);
 }
 
 [data-reveal="scale"] {
-  transform: scale(0.94);
+  transform: scale(0.92);
+  filter: blur(6px);
+}
+
+[data-reveal="fade"] {
+  transform: none;
+  filter: blur(8px);
 }
 
 [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+  filter: blur(0);
 }
 
-[data-reveal-delay="1"] { transition-delay: 0.08s; }
-[data-reveal-delay="2"] { transition-delay: 0.16s; }
-[data-reveal-delay="3"] { transition-delay: 0.24s; }
-[data-reveal-delay="4"] { transition-delay: 0.32s; }
-[data-reveal-delay="5"] { transition-delay: 0.4s; }
-[data-reveal-delay="6"] { transition-delay: 0.48s; }
+[data-reveal-delay="1"] { transition-delay: 0.06s; }
+[data-reveal-delay="2"] { transition-delay: 0.14s; }
+[data-reveal-delay="3"] { transition-delay: 0.22s; }
+[data-reveal-delay="4"] { transition-delay: 0.3s; }
+[data-reveal-delay="5"] { transition-delay: 0.38s; }
+[data-reveal-delay="6"] { transition-delay: 0.46s; }
 
 /* —— Interactive polish —— */
 .btn-lift {
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, opacity 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, opacity 0.25s ease, background-position 0.5s ease;
 }
 
 .btn-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(168, 90, 102, 0.28);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(168, 90, 102, 0.32);
+  background-position: 100% 50%;
 }
 
 .btn-lift:active {
   transform: translateY(0);
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.28) 45%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+}
+
+.btn-shimmer:hover::after {
+  transform: translateX(120%);
 }
 
 .nav-link {
@@ -162,35 +232,26 @@ body {
 }
 
 .img-zoom {
-  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .group:hover .img-zoom {
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 
 .card-float {
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease, border-color 0.35s ease;
 }
 
 .card-float:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(28, 25, 23, 0.1);
-}
-
-@keyframes soft-pulse {
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 0.85; }
-}
-
-.animate-soft-pulse {
-  animation: soft-pulse 3.5s ease-in-out infinite;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(28, 25, 23, 0.12);
 }
 
 @keyframes menu-in {
   from {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
@@ -199,7 +260,18 @@ body {
 }
 
 .animate-menu-in {
-  animation: menu-in 0.3s ease forwards;
+  animation: menu-in 0.35s ease forwards;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -208,7 +280,10 @@ body {
   .animate-rise,
   .animate-kenburns,
   .animate-soft-pulse,
-  .animate-menu-in {
+  .animate-float,
+  .animate-line-grow,
+  .animate-menu-in,
+  .animate-gradient {
     animation: none !important;
   }
 
@@ -216,9 +291,17 @@ body {
     opacity: 1;
   }
 
+  .page-enter,
+  .page-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   [data-reveal] {
     opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
   }
 
@@ -229,5 +312,9 @@ body {
 
   .group:hover .img-zoom {
     transform: none;
+  }
+
+  .btn-shimmer::after {
+    display: none;
   }
 }

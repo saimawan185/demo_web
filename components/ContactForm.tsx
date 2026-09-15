@@ -13,7 +13,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-ink-50 rounded-2xl p-8 text-center border border-ink-200">
+      <div className="bg-ink-50 rounded-2xl p-8 text-center border border-ink-200 animate-rise">
         <p className="font-display text-2xl text-ink-950">Thank you</p>
         <p className="text-sm text-ink-600 mt-3">
           This is a demo form. Please call{" "}
@@ -37,7 +37,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all bg-ink-50"
+          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white focus:-translate-y-0.5"
           placeholder="Your name"
         />
       </div>
@@ -50,7 +50,7 @@ export default function ContactForm() {
           name="phone"
           type="tel"
           required
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all bg-ink-50"
+          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white focus:-translate-y-0.5"
           placeholder="03XX-XXXXXXX"
         />
       </div>
@@ -61,7 +61,7 @@ export default function ContactForm() {
         <select
           id="service"
           name="service"
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all bg-ink-50"
+          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white"
         >
           <option value="">Select a service</option>
           <option>Bridal Makeup</option>
@@ -80,13 +80,13 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={4}
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all bg-ink-50 resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white resize-none"
           placeholder="Preferred date, event type, any notes..."
         />
       </div>
       <button
         type="submit"
-        className="w-full gradient-rose text-white font-medium py-3.5 rounded-xl hover:opacity-90 transition-opacity"
+        className="btn-lift btn-shimmer w-full gradient-rose text-white font-medium py-3.5 rounded-xl"
       >
         Send Message
       </button>

@@ -32,8 +32,9 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/92 via-ink-950/72 to-ink-950/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-ink-950/45" />
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block animate-soft-pulse">
-          <div className="w-px h-12 bg-gradient-to-b from-champagne-400/80 to-transparent" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-rise delay-4">
+          <span className="text-[10px] tracking-[0.25em] uppercase text-ink-300">Scroll</span>
+          <div className="w-px h-10 bg-gradient-to-b from-champagne-400 to-transparent animate-float" />
         </div>
 
         <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-28 md:py-36 lg:py-40">
@@ -54,7 +55,7 @@ export default function HomePage() {
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-lift gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
+              className="btn-lift btn-shimmer gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
             >
               Book Appointment
             </a>
@@ -217,7 +218,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-br from-rose-600 to-ink-900">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-rose-600 via-rose-600 to-ink-900 animate-gradient">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center text-white" data-reveal="scale">
           <h2 className="font-display text-3xl md:text-4xl font-semibold">Ready for your glow-up?</h2>
           <p className="mt-4 text-white/85">
@@ -226,7 +227,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
               href={`tel:${salon.phone}`}
-              className="btn-lift bg-white text-ink-950 font-medium px-8 py-3.5 rounded-full hover:bg-ink-50"
+              className="btn-lift btn-shimmer bg-white text-ink-950 font-medium px-8 py-3.5 rounded-full hover:bg-ink-50"
             >
               {salon.phoneDisplay}
             </a>
