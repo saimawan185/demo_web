@@ -13,11 +13,11 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-ink-50 rounded-2xl p-8 text-center border border-ink-200 animate-rise">
+      <div className="bg-ink-50 p-8 text-center border border-ink-200 animate-rise">
         <p className="font-display text-2xl text-ink-950">Thank you</p>
         <p className="text-sm text-ink-600 mt-3">
           This is a demo form. Please call{" "}
-          <a href={`tel:${salon.phone}`} className="text-rose-600 font-medium">
+          <a href={`tel:${salon.phone}`} className="text-gold-600 font-medium">
             {salon.phoneDisplay}
           </a>{" "}
           or message on WhatsApp to book.
@@ -26,43 +26,22 @@ export default function ContactForm() {
     );
   }
 
+  const field =
+    "w-full px-4 py-3 border border-ink-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 outline-none transition-all duration-300 bg-ink-50 focus:bg-white text-sm";
+
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-ink-700 mb-1.5">
-          Full Name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white focus:-translate-y-0.5"
-          placeholder="Your name"
-        />
+        <label htmlFor="name" className="eyebrow text-ink-500 mb-2 block">Full Name</label>
+        <input id="name" name="name" type="text" required className={field} placeholder="Your name" />
       </div>
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-ink-700 mb-1.5">
-          Phone Number
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          required
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white focus:-translate-y-0.5"
-          placeholder="03XX-XXXXXXX"
-        />
+        <label htmlFor="phone" className="eyebrow text-ink-500 mb-2 block">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required className={field} placeholder="03XX-XXXXXXX" />
       </div>
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-ink-700 mb-1.5">
-          Service
-        </label>
-        <select
-          id="service"
-          name="service"
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white"
-        >
+        <label htmlFor="service" className="eyebrow text-ink-500 mb-2 block">Service</label>
+        <select id="service" name="service" className={field}>
           <option value="">Select a service</option>
           <option>Bridal Makeup</option>
           <option>Party Makeup</option>
@@ -73,21 +52,16 @@ export default function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-1.5">
-          Message
-        </label>
+        <label htmlFor="message" className="eyebrow text-ink-500 mb-2 block">Message</label>
         <textarea
           id="message"
           name="message"
           rows={4}
-          className="w-full px-4 py-3 rounded-xl border border-ink-200 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 outline-none transition-all duration-300 bg-ink-50 focus:bg-white resize-none"
+          className={`${field} resize-none`}
           placeholder="Preferred date, event type, any notes..."
         />
       </div>
-      <button
-        type="submit"
-        className="btn-lift btn-shimmer w-full gradient-rose text-white font-medium py-3.5 rounded-xl"
-      >
+      <button type="submit" className="btn-dark w-full">
         Send Message
       </button>
     </form>

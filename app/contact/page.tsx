@@ -10,51 +10,52 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-ink-950 hero-glow py-16 md:py-24">
+      <section className="bg-ink-950 py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4 animate-rise">Get in Touch</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold animate-rise delay-1">Contact Us</h1>
+          <p className="eyebrow text-gold-400 mb-4 animate-rise">Get in Touch</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-medium animate-rise delay-1">Contact</h1>
+          <div className="gold-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto animate-rise delay-2">
             Call, WhatsApp or visit us in Tariq Market, F-10/2.
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             <div data-reveal="left">
-              <h2 className="font-display text-2xl text-ink-950 font-semibold mb-8">Details</h2>
+              <h2 className="font-display text-2xl text-ink-950 font-medium mb-8">Details</h2>
               <div className="space-y-6 text-ink-800">
                 <div>
-                  <p className="text-sm text-ink-500 uppercase tracking-wider">Phone</p>
-                  <a href={`tel:${salon.phone}`} className="font-medium hover:text-rose-600 transition-colors">
+                  <p className="eyebrow text-ink-500 mb-1">Phone</p>
+                  <a href={`tel:${salon.phone}`} className="font-medium hover:text-gold-600 transition-colors">
                     {salon.phoneDisplay}
                   </a>
                 </div>
                 <div>
-                  <p className="text-sm text-ink-500 uppercase tracking-wider">Address</p>
-                  <p className="leading-relaxed">{salon.address.full}</p>
+                  <p className="eyebrow text-ink-500 mb-1">Address</p>
+                  <p className="leading-relaxed text-sm">{salon.address.full}</p>
                   <a
                     href={salon.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-2 text-sm text-rose-600 hover:underline"
+                    className="inline-block mt-2 text-sm text-gold-600 hover:underline"
                   >
                     Open in Google Maps →
                   </a>
                 </div>
                 <div>
-                  <p className="text-sm text-ink-500 uppercase tracking-wider mb-2">Hours</p>
+                  <p className="eyebrow text-ink-500 mb-2">Hours</p>
                   {hours.map((item) => (
-                    <p key={item.day}>
+                    <p key={item.day} className="text-sm">
                       <span className="font-medium">{item.day}:</span> {item.hours}
                     </p>
                   ))}
                 </div>
                 <div>
-                  <p className="text-sm text-ink-500 uppercase tracking-wider mb-2">Branches</p>
-                  <ul className="space-y-1">
+                  <p className="eyebrow text-ink-500 mb-2">Branches</p>
+                  <ul className="space-y-1 text-sm">
                     {salon.branches.map((b) => (
                       <li key={b}>{b}</li>
                     ))}
@@ -63,19 +64,14 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-3">
-                <a
-                  href={salon.social.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-lift btn-shimmer gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm"
-                >
+                <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-dark">
                   WhatsApp
                 </a>
                 <a
                   href={salon.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100 transition-all duration-300 hover:-translate-y-0.5"
+                  className="border border-ink-300 text-ink-800 eyebrow px-5 py-3 hover:border-gold-500 transition-colors"
                 >
                   Facebook
                 </a>
@@ -83,7 +79,7 @@ export default function ContactPage() {
                   href={salon.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100"
+                  className="border border-ink-300 text-ink-800 eyebrow px-5 py-3 hover:border-gold-500 transition-colors"
                 >
                   Instagram
                 </a>
@@ -91,13 +87,13 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-white p-8 border border-ink-200" data-reveal="right">
-              <h2 className="font-display text-2xl text-ink-950 font-semibold mb-2">Send a message</h2>
+              <h2 className="font-display text-2xl text-ink-950 font-medium mb-2">Send a message</h2>
               <p className="text-sm text-ink-500 mb-6">Demo form only — use phone or WhatsApp to book.</p>
               <ContactForm />
             </div>
           </div>
 
-          <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal="fade">
+          <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal>
             <iframe
               title="Allure Salon & Spa location"
               src={salon.mapsEmbed}

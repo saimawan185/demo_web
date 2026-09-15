@@ -7,7 +7,7 @@ function Stars({ rating }: { rating: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className={`w-4 h-4 ${i < rating ? "text-champagne-400" : "text-ink-300"}`}
+          className={`w-3.5 h-3.5 ${i < rating ? "text-gold-400" : "text-ink-300"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -18,86 +18,93 @@ function Stars({ rating }: { rating: number }) {
   );
 }
 
+const highlights = [
+  { label: "Bridal & Party", value: "Glam Looks" },
+  { label: "Open Daily", value: "10:30 – 7:45" },
+  { label: "Location", value: "F-10 Tariq Market" },
+  { label: "Community", value: "100K+ Followers" },
+];
+
 export default function HomePage() {
   const featured = services.slice(0, 6);
 
   return (
     <>
-      <section className="relative min-h-[100svh] md:min-h-[110vh] flex items-end md:items-center overflow-hidden">
+      {/* Hero + highlights as one composition — no gap */}
+      <section className="relative min-h-[88svh] md:min-h-[92vh] flex flex-col overflow-hidden bg-ink-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={heroImage}
           alt="Premium beauty styling at Allure Salon & Spa"
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105 animate-kenburns"
+          className="absolute inset-0 w-full h-full object-cover object-[center_25%] animate-kenburns"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/92 via-ink-950/72 to-ink-950/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-ink-950/45" />
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-rise delay-4">
-          <span className="text-[10px] tracking-[0.25em] uppercase text-ink-300">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-champagne-400 to-transparent animate-float" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/80 to-ink-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/20 to-ink-950/50" />
+
+        <div className="relative flex-1 flex items-end md:items-center">
+          <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-10 md:py-20">
+            <p className="font-display text-[3.4rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.92] text-gold-200 tracking-[0.02em] animate-rise">
+              Allure
+            </p>
+            <div className="mt-3 flex items-center gap-3 animate-rise delay-1">
+              <span className="h-px w-8 bg-gold-400" />
+              <p className="eyebrow text-gold-400">Salon & Spa · F-10 Islamabad</p>
+            </div>
+            <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl text-ink-50 font-medium leading-snug max-w-lg animate-rise delay-2">
+              An elite beauty atelier for bridal days and everyday refinement
+            </h1>
+            <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
+              Hair, makeup and spa — composed with precision in Tariq Market.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
+              <a
+                href={salon.social.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Book Appointment
+              </a>
+              <Link href="/services/" className="btn-ghost">
+                View Services
+              </Link>
+            </div>
+          </div>
         </div>
 
-        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-28 md:py-36 lg:py-40">
-          <p className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-rose-300 tracking-wide animate-rise">
-            Allure
-          </p>
-          <p className="mt-2 text-xs sm:text-sm tracking-[0.35em] uppercase text-champagne-400 animate-rise delay-1">
-            Salon & Spa · F-10 Islamabad
-          </p>
-          <h1 className="mt-8 font-display text-3xl sm:text-4xl md:text-5xl text-ink-50 font-medium leading-tight max-w-xl animate-rise delay-2">
-            Beauty refined for every occasion
-          </h1>
-          <p className="mt-5 text-base md:text-lg text-ink-200 max-w-lg leading-relaxed animate-rise delay-2">
-            Bridal glam, hair artistry and spa care in the heart of Tariq Market — trusted by thousands across Islamabad.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4 animate-rise delay-3">
-            <a
-              href={salon.social.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-lift btn-shimmer gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
-            >
-              Book Appointment
-            </a>
-            <Link
-              href="/services/"
-              className="border border-white/40 text-ink-50 font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm hover:-translate-y-0.5"
-            >
-              View Services
-            </Link>
+        {/* Highlights attached to hero bottom */}
+        <div className="relative border-t border-gold-400/20 bg-ink-950/70 backdrop-blur-md">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 md:py-6 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-0 md:divide-x md:divide-white/10">
+            {highlights.map((item, i) => (
+              <div
+                key={item.label}
+                className="md:px-6 first:md:pl-0 last:md:pr-0 text-left animate-rise"
+                style={{ animationDelay: `${0.35 + i * 0.08}s` }}
+              >
+                <p className="font-display text-lg md:text-xl text-gold-300 leading-tight">{item.value}</p>
+                <p className="mt-1 eyebrow text-ink-400">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-ink-950 py-10 md:py-14 border-y border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { label: "Bridal & Party", value: "Glam Looks" },
-            { label: "Open Daily", value: "10:30 – 7:45" },
-            { label: "Location", value: "F-10 Tariq Market" },
-            { label: "Community", value: "100K+ Followers" },
-          ].map((item, i) => (
-            <div key={item.label} data-reveal data-reveal-delay={String(i + 1)}>
-              <p className="font-display text-xl md:text-2xl text-rose-300">{item.value}</p>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-ink-400">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
+      {/* Services */}
+      <section className="py-20 md:py-28 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="max-w-2xl mb-14" data-reveal>
-            <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">Services</p>
-            <h2 className="font-display text-4xl md:text-5xl text-ink-950 font-semibold">
-              Crafted for every occasion
-            </h2>
-            <p className="mt-4 text-ink-600">
-              From everyday polish to Barat-ready glam — hair, makeup, nails and spa under one roof.
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14" data-reveal>
+            <div className="max-w-xl">
+              <p className="eyebrow text-gold-600 mb-3">The Collection</p>
+              <h2 className="font-display text-4xl md:text-5xl text-ink-950 font-medium leading-tight">
+                Services composed with care
+              </h2>
+            </div>
+            <p className="text-ink-600 text-sm md:text-base max-w-sm leading-relaxed">
+              From Barat-ready glam to quiet spa rituals — every detail finished with intention.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
             {featured.map((service, i) => (
               <Link
                 key={service.id}
@@ -106,7 +113,7 @@ export default function HomePage() {
                 data-reveal
                 data-reveal-delay={String((i % 3) + 1)}
               >
-                <div className="relative aspect-[4/5] overflow-hidden bg-ink-200">
+                <div className="service-frame relative aspect-[4/5] overflow-hidden bg-ink-200">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={service.image}
@@ -114,10 +121,10 @@ export default function HomePage() {
                     className="img-zoom absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/75 via-ink-950/10 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
                     <h3 className="font-display text-2xl text-ink-50">{service.name}</h3>
-                    <p className="mt-1 text-sm text-champagne-300">
+                    <p className="mt-1 text-xs tracking-[0.16em] uppercase text-gold-300">
                       From {formatPrice(service.priceFrom)}
                     </p>
                   </div>
@@ -128,17 +135,18 @@ export default function HomePage() {
           </div>
 
           <div className="mt-12" data-reveal>
-            <Link href="/services/" className="text-ink-800 font-medium hover:text-rose-600 transition-colors inline-flex items-center gap-2 group">
+            <Link href="/services/" className="eyebrow text-ink-800 hover:text-gold-600 transition-colors inline-flex items-center gap-3 group">
               Full menu & packages
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              <span className="h-px w-8 bg-ink-400 group-hover:w-12 group-hover:bg-gold-500 transition-all duration-300" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-ink-100/70">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="relative aspect-[4/5] md:aspect-[5/4] overflow-hidden bg-ink-200 group" data-reveal="left">
+      {/* Experience */}
+      <section className="py-20 md:py-28 bg-ink-950 text-ink-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="relative aspect-[4/5] overflow-hidden" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/images/spa.jpg")}
@@ -146,71 +154,74 @@ export default function HomePage() {
               className="img-zoom absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
+            <div className="absolute inset-4 border border-gold-400/30 pointer-events-none" />
           </div>
           <div data-reveal="right">
-            <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">The Allure Experience</p>
-            <h2 className="font-display text-4xl md:text-5xl text-ink-950 font-semibold leading-tight">
-              A calm studio for bridal days and everyday glow
+            <p className="eyebrow text-gold-400 mb-4">The Allure Standard</p>
+            <h2 className="font-display text-4xl md:text-5xl text-ink-50 font-medium leading-tight">
+              Quiet luxury for bridal days and everyday glow
             </h2>
-            <p className="mt-5 text-ink-600 leading-relaxed">
-              Whether you are preparing for Mehndi and Barat or booking a facial and manicure, our F-10 team focuses on clean finishes, attentive service and looks that last through the moment.
+            <div className="gold-rule w-16 my-6" />
+            <p className="text-ink-300 leading-relaxed">
+              Whether you are preparing for Mehndi and Barat or booking a facial and manicure, our F-10 atelier focuses on clean finishes, attentive service and looks that last through the moment.
             </p>
-            <p className="mt-4 text-ink-600 leading-relaxed">
-              Visit us in Tariq Market or ask about bridal and spa appointments for Bahria Town Phase 6 clients.
+            <p className="mt-4 text-ink-400 leading-relaxed text-sm">
+              Visit us in Tariq Market, or enquire about bridal and spa appointments for Bahria Town Phase 6.
             </p>
-            <Link
-              href="/about/"
-              className="btn-lift inline-block mt-8 gradient-rose text-white font-medium px-7 py-3 rounded-full"
-            >
-              About Allure
+            <Link href="/about/" className="btn-primary mt-8">
+              Discover Allure
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-ink-950 text-ink-100">
+      {/* Visit */}
+      <section className="py-16 md:py-20 bg-ink-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div data-reveal="left">
-            <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-2">Visit Us</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-50 font-semibold">
+            <p className="eyebrow text-gold-600 mb-3">Visit</p>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950 font-medium">
               Open every day in Tariq Market
             </h2>
-            <p className="mt-4 text-ink-300 leading-relaxed">
+            <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
               Walk in or book ahead for bridal trials, spa sessions and event styling at our F-10/2 studio.
             </p>
           </div>
-          <div className="border border-white/10 p-8 bg-white/5" data-reveal="right">
+          <div className="border border-ink-300/80 bg-ink-50 p-7 md:p-8" data-reveal="right">
             {hours.map((item) => (
-              <div key={item.day} className="flex justify-between gap-4 border-b border-white/10 pb-4 mb-4 last:border-0 last:pb-0 last:mb-0">
-                <span>{item.day}</span>
-                <span className="text-champagne-400">{item.hours}</span>
+              <div key={item.day} className="flex justify-between gap-4 border-b border-ink-200 pb-4 mb-4 last:border-0 last:pb-0 last:mb-0">
+                <span className="text-ink-800 text-sm">{item.day}</span>
+                <span className="text-gold-600 text-sm tracking-wide">{item.hours}</span>
               </div>
             ))}
-            <p className="mt-6 text-sm text-ink-400">{salon.address.full}</p>
+            <p className="mt-5 text-xs text-ink-500 leading-relaxed">{salon.address.full}</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-ink-50">
+      {/* Reviews */}
+      <section className="py-20 md:py-24 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12" data-reveal>
-            <p className="text-rose-600 text-sm tracking-[0.2em] uppercase mb-2">Testimonials</p>
-            <h2 className="font-display text-4xl text-ink-950 font-semibold">Loved by clients</h2>
-            <p className="mt-3 text-sm text-ink-500">Sample testimonials for this demo website.</p>
+            <p className="eyebrow text-gold-600 mb-3">Client Notes</p>
+            <h2 className="font-display text-4xl text-ink-950 font-medium">Voices of Allure</h2>
+            <div className="gold-rule w-20 mx-auto mt-5" />
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {reviews.map((review, i) => (
               <blockquote
                 key={review.name}
-                className="card-float bg-white p-6 border border-ink-200"
+                className="border border-ink-200 bg-white p-7"
                 data-reveal
                 data-reveal-delay={String(i + 1)}
               >
                 <Stars rating={review.rating} />
-                <p className="mt-4 text-ink-700 text-sm leading-relaxed italic">&ldquo;{review.text}&rdquo;</p>
-                <footer className="mt-4 pt-4 border-t border-ink-100">
-                  <cite className="not-italic font-medium text-ink-950">{review.name}</cite>
-                  <p className="text-xs text-ink-400 mt-1">{review.time}</p>
+                <p className="mt-5 font-display text-lg text-ink-800 leading-relaxed italic">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <footer className="mt-6 pt-4 border-t border-ink-100">
+                  <cite className="not-italic text-sm tracking-wide text-ink-950">{review.name}</cite>
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-ink-400 mt-1">{review.time}</p>
                 </footer>
               </blockquote>
             ))}
@@ -218,23 +229,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-br from-rose-600 via-rose-600 to-ink-900 animate-gradient">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center text-white" data-reveal="scale">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold">Ready for your glow-up?</h2>
-          <p className="mt-4 text-white/85">
-            Call or WhatsApp Allure to reserve bridal, party or spa appointments in F-10.
+      {/* CTA */}
+      <section className="py-20 md:py-24 bg-ink-950 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: `url(${asset("/images/bridal.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 bg-ink-950/85" />
+        <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
+          <p className="eyebrow text-gold-400 mb-4">Reserve Your Moment</p>
+          <h2 className="font-display text-3xl md:text-5xl text-ink-50 font-medium">
+            Ready for an elevated appointment?
+          </h2>
+          <p className="mt-4 text-ink-300 text-sm md:text-base">
+            Call or WhatsApp Allure to book bridal, party or spa services in F-10.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href={`tel:${salon.phone}`}
-              className="btn-lift btn-shimmer bg-white text-ink-950 font-medium px-8 py-3.5 rounded-full hover:bg-ink-50"
-            >
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <a href={`tel:${salon.phone}`} className="btn-primary">
               {salon.phoneDisplay}
             </a>
-            <Link
-              href="/contact/"
-              className="border border-white/50 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 hover:-translate-y-0.5"
-            >
+            <Link href="/contact/" className="btn-ghost">
               Contact Us
             </Link>
           </div>

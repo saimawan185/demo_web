@@ -16,29 +16,30 @@ export default function ServicesPage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-kenburns"
         />
-        <div className="absolute inset-0 bg-ink-950/75" />
+        <div className="absolute inset-0 bg-ink-950/80" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4 animate-rise">Menu</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold animate-rise delay-1">
+          <p className="eyebrow text-gold-400 mb-4 animate-rise">The Menu</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-medium animate-rise delay-1">
             Services & Prices
           </h1>
-          <p className="mt-6 text-ink-200 max-w-2xl mx-auto animate-rise delay-2">
+          <div className="gold-rule w-16 mx-auto mt-6 animate-rise delay-2" />
+          <p className="mt-6 text-ink-300 max-w-2xl mx-auto text-sm md:text-base animate-rise delay-2">
             Demo pricing for planning — final rates depend on look complexity, hair length and products used.
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <article
                 key={service.id}
-                className="group card-float"
+                className="group"
                 data-reveal
                 data-reveal-delay={String((i % 3) + 1)}
               >
-                <div className="relative aspect-[5/4] overflow-hidden bg-ink-200">
+                <div className="service-frame relative aspect-[5/4] overflow-hidden bg-ink-200">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={service.image}
@@ -51,9 +52,9 @@ export default function ServicesPage() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h2 className="font-display text-xl md:text-2xl text-ink-950">{service.name}</h2>
-                      <p className="text-xs text-ink-400 mt-1">{service.duration}</p>
+                      <p className="text-[11px] tracking-[0.16em] uppercase text-ink-400 mt-1">{service.duration}</p>
                     </div>
-                    <p className="text-rose-600 font-semibold whitespace-nowrap">
+                    <p className="text-gold-600 font-semibold text-sm whitespace-nowrap tracking-wide">
                       {formatPrice(service.priceFrom)}+
                     </p>
                   </div>
@@ -63,25 +64,25 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-16 bg-ink-100 p-8 border border-ink-200" data-reveal>
-            <h3 className="font-display text-xl text-ink-950 mb-6">Popular packages (demo)</h3>
+          <div className="mt-16 border border-ink-200 bg-white p-8" data-reveal>
+            <h3 className="font-display text-2xl text-ink-950 mb-6">Signature packages</h3>
             <div className="grid sm:grid-cols-3 gap-4">
               {packages.map((pkg, i) => (
                 <div
                   key={pkg.name}
-                  className="card-float bg-white p-5 border border-ink-200"
+                  className="border border-ink-200 p-5 hover:border-gold-400/60 transition-colors"
                   data-reveal
                   data-reveal-delay={String(i + 1)}
                 >
-                  <h4 className="font-medium text-ink-950">{pkg.name}</h4>
+                  <h4 className="font-display text-lg text-ink-950">{pkg.name}</h4>
                   <p className="text-sm text-ink-500 mt-1">{pkg.desc}</p>
-                  <p className="text-rose-600 font-semibold mt-3">{formatPrice(pkg.price)}</p>
+                  <p className="text-gold-600 font-semibold mt-3 text-sm tracking-wide">{formatPrice(pkg.price)}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="text-center text-sm text-ink-500 pt-8" data-reveal>
+          <p className="text-center text-xs text-ink-500 pt-8 tracking-wide" data-reveal>
             * Dummy prices for website demo. Confirm current rates when you book.
           </p>
 
@@ -90,7 +91,7 @@ export default function ServicesPage() {
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-lift btn-shimmer inline-block gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
+              className="btn-dark"
             >
               Book on WhatsApp
             </a>
