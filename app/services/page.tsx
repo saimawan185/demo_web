@@ -14,13 +14,15 @@ export default function ServicesPage() {
         <img
           src={asset("/images/hair.jpg")}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover animate-kenburns"
         />
         <div className="absolute inset-0 bg-ink-950/75" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4">Menu</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold">Services & Prices</h1>
-          <p className="mt-6 text-ink-200 max-w-2xl mx-auto">
+          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4 animate-rise">Menu</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold animate-rise delay-1">
+            Services & Prices
+          </h1>
+          <p className="mt-6 text-ink-200 max-w-2xl mx-auto animate-rise delay-2">
             Demo pricing for planning — final rates depend on look complexity, hair length and products used.
           </p>
         </div>
@@ -29,14 +31,19 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <article key={service.id} className="group">
+            {services.map((service, i) => (
+              <article
+                key={service.id}
+                className="group card-float"
+                data-reveal
+                data-reveal-delay={String((i % 3) + 1)}
+              >
                 <div className="relative aspect-[5/4] overflow-hidden bg-ink-200">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={service.image}
                     alt={service.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="img-zoom absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
@@ -56,11 +63,16 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-16 bg-ink-100 p-8 border border-ink-200">
+          <div className="mt-16 bg-ink-100 p-8 border border-ink-200" data-reveal>
             <h3 className="font-display text-xl text-ink-950 mb-6">Popular packages (demo)</h3>
             <div className="grid sm:grid-cols-3 gap-4">
-              {packages.map((pkg) => (
-                <div key={pkg.name} className="bg-white p-5 border border-ink-200">
+              {packages.map((pkg, i) => (
+                <div
+                  key={pkg.name}
+                  className="card-float bg-white p-5 border border-ink-200"
+                  data-reveal
+                  data-reveal-delay={String(i + 1)}
+                >
                   <h4 className="font-medium text-ink-950">{pkg.name}</h4>
                   <p className="text-sm text-ink-500 mt-1">{pkg.desc}</p>
                   <p className="text-rose-600 font-semibold mt-3">{formatPrice(pkg.price)}</p>
@@ -69,16 +81,16 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <p className="text-center text-sm text-ink-500 pt-8">
+          <p className="text-center text-sm text-ink-500 pt-8" data-reveal>
             * Dummy prices for website demo. Confirm current rates when you book.
           </p>
 
-          <div className="text-center pt-6">
+          <div className="text-center pt-6" data-reveal>
             <a
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block gradient-rose text-white font-medium px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+              className="btn-lift inline-block gradient-rose text-white font-medium px-8 py-3.5 rounded-full"
             >
               Book on WhatsApp
             </a>

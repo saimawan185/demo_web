@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RevealInit from "@/components/RevealInit";
 import { salon } from "@/lib/data";
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
+        <RevealInit />
         <Header />
         <main className="min-h-screen pt-16 md:pt-20">{children}</main>
         <Footer />

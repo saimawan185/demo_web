@@ -12,9 +12,9 @@ export default function ContactPage() {
     <>
       <section className="bg-ink-950 hero-glow py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4">Get in Touch</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold">Contact Us</h1>
-          <p className="mt-6 text-ink-300 max-w-2xl mx-auto">
+          <p className="text-champagne-400 text-sm tracking-[0.2em] uppercase mb-4 animate-rise">Get in Touch</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-semibold animate-rise delay-1">Contact Us</h1>
+          <p className="mt-6 text-ink-300 max-w-2xl mx-auto animate-rise delay-2">
             Call, WhatsApp or visit us in Tariq Market, F-10/2.
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
+            <div data-reveal="left">
               <h2 className="font-display text-2xl text-ink-950 font-semibold mb-8">Details</h2>
               <div className="space-y-6 text-ink-800">
                 <div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   href={salon.social.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm hover:opacity-90"
+                  className="btn-lift gradient-rose text-white font-medium px-6 py-3 rounded-full text-sm"
                 >
                   WhatsApp
                 </a>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   href={salon.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100"
+                  className="border border-ink-300 text-ink-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-ink-100 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Facebook
                 </a>
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white p-8 border border-ink-200">
+            <div className="bg-white p-8 border border-ink-200" data-reveal="right">
               <h2 className="font-display text-2xl text-ink-950 font-semibold mb-2">Send a message</h2>
               <p className="text-sm text-ink-500 mb-6">Demo form only — use phone or WhatsApp to book.</p>
               <ContactForm />

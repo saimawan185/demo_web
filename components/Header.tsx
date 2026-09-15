@@ -15,11 +15,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-ink-950/90 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-ink-950/90 backdrop-blur-md border-b border-white/10 transition-shadow duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="group">
-            <span className="font-display text-2xl md:text-3xl text-rose-300 tracking-wide group-hover:text-rose-400 transition-colors">
+            <span className="font-display text-2xl md:text-3xl text-rose-300 tracking-wide transition-colors duration-300 group-hover:text-rose-400">
               Allure
             </span>
             <span className="block text-[10px] md:text-xs text-ink-300 tracking-[0.28em] uppercase -mt-0.5">
@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-ink-200 hover:text-rose-300 transition-colors tracking-wide"
+                className="nav-link text-sm text-ink-200 hover:text-rose-300 transition-colors tracking-wide"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Header() {
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-rose text-white text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+              className="btn-lift gradient-rose text-white text-sm font-medium px-5 py-2.5 rounded-full"
             >
               Book Now
             </a>
@@ -50,7 +50,8 @@ export default function Header() {
           <button
             type="button"
             aria-label="Toggle menu"
-            className="md:hidden p-2 text-ink-100"
+            aria-expanded={open}
+            className="md:hidden p-2 text-ink-100 transition-transform duration-200 active:scale-95"
             onClick={() => setOpen(!open)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +65,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <nav className="md:hidden pb-4 border-t border-white/10 pt-4 flex flex-col gap-3">
+          <nav className="md:hidden pb-4 border-t border-white/10 pt-4 flex flex-col gap-3 animate-menu-in">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -79,7 +80,7 @@ export default function Header() {
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-rose text-white text-center font-medium px-5 py-3 rounded-full mt-2"
+              className="btn-lift gradient-rose text-white text-center font-medium px-5 py-3 rounded-full mt-2"
             >
               Book Now
             </a>
