@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { salon, services, reviews, hours, formatPrice } from "@/lib/data";
+import { salon, services, reviews, hours, formatPrice, heroImage } from "@/lib/data";
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -23,42 +24,44 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative min-h-[88vh] flex items-center bg-ink-950 hero-glow overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/3 -right-16 w-[28rem] h-[28rem] rounded-full bg-rose-500/25 blur-3xl" />
-          <div className="absolute bottom-10 -left-10 w-72 h-72 rounded-full bg-champagne-500/20 blur-3xl" />
-        </div>
+      {/* Full-bleed premium hero */}
+      <section className="relative min-h-[92vh] flex items-end md:items-center overflow-hidden">
+        <Image
+          src={heroImage}
+          alt="Premium beauty styling at Allure Salon & Spa"
+          fill
+          priority
+          className="object-cover object-center scale-105 animate-kenburns"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/70 to-ink-950/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-ink-950/40" />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
-          <p className="text-champagne-400 text-sm tracking-[0.32em] uppercase mb-5 animate-rise">
-            F-10 · Islamabad
-          </p>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-ink-50 font-semibold leading-[1.05] max-w-3xl animate-rise delay-1">
+        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+          <p className="font-display text-4xl sm:text-5xl md:text-6xl text-rose-300 tracking-wide animate-rise">
             Allure
-            <span className="block text-gradient-rose italic font-medium">Salon & Spa</span>
-          </h1>
-          <p className="mt-6 text-lg text-ink-300 max-w-xl leading-relaxed animate-rise delay-2">
-            {salon.tagline}. Bridal glam, hair artistry and spa care — trusted by thousands across Islamabad.
           </p>
-
-          <div className="mt-6 flex items-center gap-3 animate-rise delay-2">
-            <Stars rating={5} />
-            <span className="text-ink-100 font-medium">{salon.rating}</span>
-            <span className="text-ink-400 text-sm">client favourite · 100K+ on Facebook</span>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-4 animate-rise delay-3">
+          <p className="mt-1 text-xs sm:text-sm tracking-[0.35em] uppercase text-champagne-400 animate-rise delay-1">
+            Salon & Spa · F-10 Islamabad
+          </p>
+          <h1 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-ink-50 font-medium leading-tight max-w-xl animate-rise delay-2">
+            Beauty refined for every occasion
+          </h1>
+          <p className="mt-4 text-base md:text-lg text-ink-200 max-w-md leading-relaxed animate-rise delay-2">
+            Bridal glam, hair artistry and spa care in the heart of Tariq Market.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4 animate-rise delay-3">
             <a
               href={salon.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-rose text-white font-medium px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+              className="gradient-rose text-white font-medium px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-rose-900/30"
             >
               Book Appointment
             </a>
             <Link
               href="/services/"
-              className="border border-champagne-400/40 text-champagne-300 font-medium px-8 py-3.5 rounded-full hover:bg-white/5 transition-colors"
+              className="border border-white/40 text-ink-50 font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm"
             >
               View Services
             </Link>
@@ -66,6 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Services with images */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-12">
@@ -74,23 +78,35 @@ export default function HomePage() {
               Crafted for every occasion
             </h2>
             <p className="mt-4 text-ink-600">
-              From everyday polish to Barat-ready glam — one salon for hair, makeup, nails and spa.
+              From everyday polish to Barat-ready glam — hair, makeup, nails and spa under one roof.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map((service) => (
-              <div
+              <Link
                 key={service.id}
-                className="bg-white p-6 border border-ink-100 hover:border-rose-300/50 transition-colors"
+                href="/services/"
+                className="group block"
               >
-                <h3 className="font-display text-xl text-ink-950">{service.name}</h3>
-                <p className="text-ink-600 text-sm mt-2 leading-relaxed">{service.description}</p>
-                <div className="mt-5 flex items-center justify-between text-sm">
-                  <span className="text-rose-600 font-medium">From {formatPrice(service.priceFrom)}</span>
-                  <span className="text-ink-400">{service.duration}</span>
+                <div className="relative aspect-[4/5] overflow-hidden bg-ink-200">
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/75 via-ink-950/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <h3 className="font-display text-2xl text-ink-50">{service.name}</h3>
+                    <p className="mt-1 text-sm text-champagne-300">
+                      From {formatPrice(service.priceFrom)}
+                    </p>
+                  </div>
                 </div>
-              </div>
+                <p className="mt-3 text-ink-600 text-sm leading-relaxed">{service.description}</p>
+              </Link>
             ))}
           </div>
 
