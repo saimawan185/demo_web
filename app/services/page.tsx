@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={asset("/images/hair.jpg")}

@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/20 to-ink-950/50" />
 
         <div className="relative flex-1 flex items-end md:items-center">
-          <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-10 md:py-20">
+          <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-10 md:pt-32 md:pb-16">
             <p className="font-display text-[3.4rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.92] text-gold-200 tracking-[0.02em] animate-rise">
               Allure
             </p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-ink-950 py-20 md:py-28">
+      <section className="bg-ink-950 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <p className="eyebrow text-gold-400 mb-4 animate-rise">Our Story</p>
           <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-medium animate-rise delay-1">About Allure</h1>
