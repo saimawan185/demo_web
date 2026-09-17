@@ -1,6 +1,6 @@
-# Jasmine Beauty Salon & SPA — Demo Website
+# Diana's Glamour Salon — Demo Website
 
-Premium demo site for **Jasmine Beauty Salon & SPA** (7K, F-10 Markaz, Islamabad) — a salon listed online without a dedicated website.
+Premium demo site for **Diana's Glamour Salon** (G-9 Markaz, Islamabad) — a salon listed online with a mobile WhatsApp number and **no dedicated website**.
 
 ## Live
 
@@ -10,10 +10,10 @@ Premium demo site for **Jasmine Beauty Salon & SPA** (7K, F-10 Markaz, Islamabad
 
 | | |
 |--|--|
-| **Name** | Jasmine Beauty Salon & SPA |
-| **Address** | 7K, F-10 Markaz, Islamabad |
-| **Phone** | (051) 434-9949 |
-| **Hours** | Suggested: Daily 11:00 AM – 8:00 PM |
+| **Name** | Diana's Glamour Salon |
+| **Address** | G-9 Markaz, Islamabad |
+| **Phone** | +92 317 5481454 (`+923175481454`) |
+| **Hours** | Suggested: Daily 10:00 AM – 8:00 PM |
 
 ## Develop
 

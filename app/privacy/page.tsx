@@ -3,7 +3,7 @@ import { salon } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Jasmine Beauty Salon & SPA demo website.",
+  description: "Privacy Policy for the Diana's Glamour Salon demo website.",
 };
 
 export default function PrivacyPage() {

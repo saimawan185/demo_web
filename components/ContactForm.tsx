@@ -16,16 +16,16 @@ export default function ContactForm() {
       <div className="bg-ink-50 p-8 text-center border border-ink-200 animate-rise">
         <p className="font-display text-2xl text-ink-950">Thank you</p>
         <p className="text-sm text-ink-600 mt-3">
-          This is a demo form. Please call{" "}
-          <a href={`tel:${salon.phone}`} className="text-sage-600 font-medium">{salon.phoneDisplay}</a>{" "}
-          or WhatsApp to book.
+          This is a demo form. Please WhatsApp or call{" "}
+          <a href={`tel:${salon.phone}`} className="text-rose-600 font-medium">{salon.phoneDisplay}</a>{" "}
+          to book.
         </p>
       </div>
     );
   }
 
   const field =
-    "w-full px-4 py-3 border border-ink-200 focus:border-sage-400 focus:ring-1 focus:ring-sage-400/30 outline-none transition-all duration-300 bg-ink-50 focus:bg-white text-sm";
+    "w-full px-4 py-3 border border-ink-200 focus:border-rose-400 focus:ring-1 focus:ring-rose-400/30 outline-none transition-all duration-300 bg-ink-50 focus:bg-white text-sm";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -44,7 +44,7 @@ export default function ContactForm() {
           <option>Bridal Makeup</option>
           <option>Party Makeup</option>
           <option>Hairstyling</option>
-          <option>Spa / Facial</option>
+          <option>Facial</option>
           <option>Manicure / Pedicure</option>
           <option>Other</option>
         </select>
