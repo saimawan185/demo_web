@@ -32,7 +32,7 @@ export default function ContactPage() {
                   <a href={`tel:${salon.phone}`} className="font-medium hover:text-steel-600 transition-colors text-lg">
                     {salon.phoneDisplay}
                   </a>
-                  <p className="text-xs text-ink-500 mt-2">No WhatsApp booking listed for this salon.</p>
+                  <p className="text-xs text-ink-500 mt-2">Appointments are booked by phone call.</p>
                 </div>
                 <div>
                   <p className="eyebrow text-ink-500 mb-1">Address</p>

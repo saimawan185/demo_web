@@ -44,7 +44,7 @@ export default function HomePage() {
               Hair and beauty care, a phone call away
             </h1>
             <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
-              Bridal looks, hair, facials and nails — book by calling {salon.phoneDisplay}. No WhatsApp listing.
+              Bridal looks, hair, facials and nails — book by calling {salon.phoneDisplay}.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
               <a href={`tel:${salon.phone}`} className="btn-primary">
@@ -119,7 +119,7 @@ export default function HomePage() {
             </h2>
             <div className="accent-rule w-16 my-6" />
             <p className="text-ink-300 leading-relaxed">
-              Fashion Beauty Saloon is listed with a mobile number only — no website and no WhatsApp channel online. This demo gives them a clear place to show services and invite clients to call.
+              Fashion Beauty Saloon is listed online with a mobile number only — no dedicated website. This demo gives them a clear place to show services and invite clients to call.
             </p>
             <p className="mt-4 text-ink-400 leading-relaxed text-sm">
               Call <strong className="text-steel-300">{salon.phoneDisplay}</strong> to book.

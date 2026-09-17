@@ -29,7 +29,7 @@ export default function AboutPage() {
               <strong className="text-ink-950">{salon.name}</strong> is located on Street 5 in G-9, Islamabad. The listing focuses on hairdressing and beauty salon services.
             </p>
             <p>
-              Online, they appear with a mobile phone only — no dedicated website and no WhatsApp booking channel. This demo site presents services clearly and points clients to call.
+              Online, they appear with a mobile phone only and no dedicated website. This demo site presents services clearly and points clients to call.
             </p>
             <p>
               Call <strong className="text-ink-950">{salon.phoneDisplay}</strong> to confirm services, rates and appointment times.
