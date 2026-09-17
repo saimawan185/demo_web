@@ -3,28 +3,28 @@ import { salon, hours } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink-950 text-ink-400 border-t border-rose-400/20">
+    <footer className="bg-ink-950 text-ink-400 border-t border-steel-400/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <p className="font-display text-2xl text-rose-300 italic">Diana&apos;s</p>
-            <p className="eyebrow text-ink-500 mt-1 mb-4">Glamour Salon</p>
+            <p className="font-display text-2xl text-steel-300">Fashion Beauty</p>
+            <p className="eyebrow text-ink-500 mt-1 mb-4">Saloon · G-9</p>
             <p className="text-sm leading-relaxed">
-              Beauty and glamour care in G-9 Markaz, Islamabad.
+              Hair and beauty care on Street 5, G-9 Islamabad. Book by phone.
             </p>
           </div>
           <div>
-            <h3 className="eyebrow text-rose-400 mb-5">Explore</h3>
+            <h3 className="eyebrow text-steel-400 mb-5">Explore</h3>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/" className="hover:text-rose-300 transition-colors">Home</Link></li>
-              <li><Link href="/about/" className="hover:text-rose-300 transition-colors">About</Link></li>
-              <li><Link href="/services/" className="hover:text-rose-300 transition-colors">Services</Link></li>
-              <li><Link href="/contact/" className="hover:text-rose-300 transition-colors">Contact</Link></li>
-              <li><Link href="/privacy/" className="hover:text-rose-300 transition-colors">Privacy</Link></li>
+              <li><Link href="/" className="hover:text-steel-300 transition-colors">Home</Link></li>
+              <li><Link href="/about/" className="hover:text-steel-300 transition-colors">About</Link></li>
+              <li><Link href="/services/" className="hover:text-steel-300 transition-colors">Services</Link></li>
+              <li><Link href="/contact/" className="hover:text-steel-300 transition-colors">Contact</Link></li>
+              <li><Link href="/privacy/" className="hover:text-steel-300 transition-colors">Privacy</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="eyebrow text-rose-400 mb-5">Hours</h3>
+            <h3 className="eyebrow text-steel-400 mb-5">Hours</h3>
             <ul className="space-y-2 text-sm">
               {hours.map((item) => (
                 <li key={item.day}>
@@ -36,10 +36,10 @@ export default function Footer() {
             <p className="text-[11px] text-ink-600 mt-3">Suggested hours for this demo.</p>
           </div>
           <div>
-            <h3 className="eyebrow text-rose-400 mb-5">Contact</h3>
+            <h3 className="eyebrow text-steel-400 mb-5">Call</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href={`tel:${salon.phone}`} className="text-ink-200 hover:text-rose-300 transition-colors">
+                <a href={`tel:${salon.phone}`} className="text-ink-200 hover:text-steel-300 transition-colors">
                   {salon.phoneDisplay}
                 </a>
               </li>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] tracking-wide text-ink-600">
-          <p>&copy; {new Date().getFullYear()} Diana&apos;s Glamour Salon. Demo website.</p>
+          <p>&copy; {new Date().getFullYear()} Fashion Beauty Saloon. Demo website.</p>
           <p>Indicative prices — confirm when booking.</p>
         </div>
       </div>

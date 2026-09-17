@@ -3,7 +3,7 @@ import { salon } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Diana's Glamour Salon demo website.",
+  description: "Privacy Policy for the Fashion Beauty Saloon demo website.",
 };
 
 export default function PrivacyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-display text-2xl text-ink-950 mb-3">2. Information we collect</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Contact details shared by phone, WhatsApp or form</li>
+              <li>Contact details shared by phone or form</li>
               <li>Basic usage data if analytics are enabled on the hosted site</li>
               <li>Appointment preferences when you book a service</li>
             </ul>

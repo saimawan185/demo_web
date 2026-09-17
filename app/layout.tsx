@@ -8,11 +8,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Beauty Salon in G-9 Markaz, Islamabad`,
+    default: `${salon.name} | Beauty Salon in G-9, Islamabad`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Diana's Glamour Salon — bridal makeup, hair and beauty services in G-9 Markaz, Islamabad. Call +92 317 5481454.",
+    "Fashion Beauty Saloon — hair and beauty services on Street 5, G-9 Islamabad. Call +92 300 5339157 to book.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Outfit:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

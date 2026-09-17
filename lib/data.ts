@@ -7,34 +7,33 @@ export function asset(path: string): string {
 }
 
 export const salon = {
-  name: "Diana's Glamour Salon",
-  shortName: "Diana's",
-  tagline: "Beauty & Glamour in G-9 Markaz",
-  phone: "+923175481454",
-  phoneDisplay: "+92 317 5481454",
-  email: "hello@dianasglamour.pk",
+  name: "Fashion Beauty Saloon",
+  shortName: "Fashion Beauty",
+  tagline: "Hair & Beauty on Street 5, G-9",
+  phone: "+923005339157",
+  phoneDisplay: "+92 300 5339157",
+  email: "hello@fashionbeauty.pk",
   address: {
-    street: "G-9 Markaz",
+    street: "Street 5",
     area: "G-9",
     city: "Islamabad",
     postal: "44000",
     country: "Pakistan",
-    full: "G-9 Markaz, Islamabad, Pakistan",
+    full: "Street 5, G-9, Islamabad, Pakistan",
   },
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Diana%27s+Glamour+Salon+G-9+Markaz+Islamabad",
+    "https://www.google.com/maps/search/?api=1&query=Fashion+Beauty+Saloon+Street+5+G-9+Islamabad",
   mapsEmbed:
-    "https://www.google.com/maps?q=Diana%27s+Glamour+Salon+G-9+Markaz+Islamabad&output=embed",
+    "https://www.google.com/maps?q=Fashion+Beauty+Saloon+Street+5+G-9+Islamabad&output=embed",
   social: {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
-    whatsapp: "https://wa.me/923175481454",
   },
 };
 
-/** Maps listing showed open until 8:00 PM */
+/** Maps listing showed open late; confirm when calling */
 export const hours = [
-  { day: "Monday – Sunday", hours: "10:00 AM – 8:00 PM" },
+  { day: "Monday – Sunday", hours: "10:00 AM – 11:00 PM" },
 ];
 
 export const heroImage = asset("/images/hero.jpg");
@@ -44,7 +43,7 @@ export const services = [
     id: "bridal-makeup",
     name: "Bridal Makeup",
     description: "Mehndi, Barat and Walima looks finished for lasting, camera-ready glam.",
-    priceFrom: 20000,
+    priceFrom: 18000,
     duration: "2–3 hrs",
     image: asset("/images/bridal.jpg"),
   },
@@ -52,15 +51,15 @@ export const services = [
     id: "party-makeup",
     name: "Party Makeup",
     description: "Soft glam to bold evening makeup for dinners, events and celebrations.",
-    priceFrom: 6500,
+    priceFrom: 5500,
     duration: "60–90 min",
     image: asset("/images/party.jpg"),
   },
   {
     id: "hairstyling",
-    name: "Hairstyling & Blow Dry",
+    name: "Haircut & Styling",
     description: "Cuts, blowouts and occasion styling for everyday polish or events.",
-    priceFrom: 2000,
+    priceFrom: 1500,
     duration: "45–90 min",
     image: asset("/images/hair.jpg"),
   },
@@ -68,7 +67,7 @@ export const services = [
     id: "spa",
     name: "Facials & Skin Care",
     description: "Facials and glow treatments for refreshed, healthy-looking skin.",
-    priceFrom: 3500,
+    priceFrom: 3000,
     duration: "45–90 min",
     image: asset("/images/spa.jpg"),
   },
@@ -76,7 +75,7 @@ export const services = [
     id: "manicure",
     name: "Manicure",
     description: "Classic and gel manicures with clean, polished finishing.",
-    priceFrom: 1200,
+    priceFrom: 1000,
     duration: "30–45 min",
     image: asset("/images/manicure.jpg"),
   },
@@ -84,7 +83,7 @@ export const services = [
     id: "pedicure",
     name: "Pedicure",
     description: "Foot care with scrub, massage and polish for soft, groomed feet.",
-    priceFrom: 1500,
+    priceFrom: 1200,
     duration: "45–60 min",
     image: asset("/images/pedicure.jpg"),
   },
@@ -92,7 +91,7 @@ export const services = [
     id: "keratin",
     name: "Hair Treatments",
     description: "Smoothing and repair treatments for healthier, shinier hair.",
-    priceFrom: 9000,
+    priceFrom: 8000,
     duration: "2–3 hrs",
     image: asset("/images/keratin.jpg"),
   },
@@ -100,35 +99,35 @@ export const services = [
     id: "waxing",
     name: "Waxing",
     description: "Full body and targeted waxing with gentle salon-grade products.",
-    priceFrom: 800,
+    priceFrom: 700,
     duration: "20–60 min",
     image: asset("/images/waxing.jpg"),
   },
 ];
 
 export const packages = [
-  { name: "Bridal Soft Glow", price: 15000, desc: "Trial makeup + styled hair" },
-  { name: "Barat Complete", price: 28000, desc: "Full bridal makeup, hair & touch-up" },
-  { name: "Party Ready", price: 9000, desc: "Party makeup + blow dry" },
+  { name: "Bridal Soft Glow", price: 14000, desc: "Trial makeup + styled hair" },
+  { name: "Barat Complete", price: 26000, desc: "Full bridal makeup, hair & touch-up" },
+  { name: "Party Ready", price: 8000, desc: "Party makeup + blow dry" },
 ];
 
 export const reviews = [
   {
-    name: "Fatima R.",
+    name: "Sana M.",
     rating: 5,
-    text: "Booked party makeup on WhatsApp — soft glam finish and on time. Easy to reach on their mobile number.",
+    text: "Called ahead for a blow-dry and party makeup — clear booking over the phone and a neat finish.",
     time: "Recent client",
   },
   {
-    name: "Mehwish A.",
+    name: "Nadia K.",
     rating: 5,
-    text: "Came for a facial and blow-dry in G-9 Markaz. Clean space, careful work, and fair pricing.",
-    time: "Regular visitor",
+    text: "Convenient Street 5 location in G-9. Haircut and facial were done carefully without rushing.",
+    time: "Local client",
   },
   {
-    name: "Iqra S.",
+    name: "Ayesha T.",
     rating: 5,
-    text: "Bridal trial was exactly what I asked for. Friendly team and a polished, glamorous look.",
+    text: "Bridal trial looked soft and natural. Easy to reach by calling their mobile number.",
     time: "Bridal client",
   },
 ];

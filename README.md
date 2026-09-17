@@ -1,6 +1,6 @@
-# Diana's Glamour Salon — Demo Website
+# Fashion Beauty Saloon — Demo Website
 
-Premium demo site for **Diana's Glamour Salon** (G-9 Markaz, Islamabad) — a salon listed online with a mobile WhatsApp number and **no dedicated website**.
+Premium demo site for **Fashion Beauty Saloon** (Street 5, G-9, Islamabad) — listed with a **+923 mobile** and **no website / no WhatsApp** booking channel.
 
 ## Live
 
@@ -10,10 +10,11 @@ Premium demo site for **Diana's Glamour Salon** (G-9 Markaz, Islamabad) — a sa
 
 | | |
 |--|--|
-| **Name** | Diana's Glamour Salon |
-| **Address** | G-9 Markaz, Islamabad |
-| **Phone** | +92 317 5481454 (`+923175481454`) |
-| **Hours** | Suggested: Daily 10:00 AM – 8:00 PM |
+| **Name** | Fashion Beauty Saloon |
+| **Address** | Street 5, G-9, Islamabad |
+| **Phone** | +92 300 5339157 (`+923005339157`) |
+| **Booking** | Call only (no WhatsApp CTA) |
+| **Hours** | Suggested: Daily 10:00 AM – 11:00 PM |
 
 ## Develop
 

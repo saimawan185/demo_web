@@ -5,7 +5,7 @@ function Stars({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg key={i} className={`w-3.5 h-3.5 ${i < rating ? "text-rose-400" : "text-ink-300"}`} fill="currentColor" viewBox="0 0 20 20">
+        <svg key={i} className={`w-3.5 h-3.5 ${i < rating ? "text-steel-400" : "text-ink-300"}`} fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
@@ -14,10 +14,10 @@ function Stars({ rating }: { rating: number }) {
 }
 
 const highlights = [
-  { label: "Location", value: "G-9 Markaz" },
-  { label: "Suggested Hours", value: "10:00 – 8:00" },
-  { label: "Focus", value: "Beauty & Glamour" },
-  { label: "Booking", value: "WhatsApp / Call" },
+  { label: "Location", value: "Street 5, G-9" },
+  { label: "Suggested Hours", value: "10:00 – 11:00" },
+  { label: "Focus", value: "Hair & Beauty" },
+  { label: "Booking", value: "Call only" },
 ];
 
 export default function HomePage() {
@@ -27,39 +27,39 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88svh] md:min-h-[92vh] flex flex-col overflow-hidden bg-ink-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={heroImage} alt="Diana's Glamour Salon" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
+        <img src={heroImage} alt="Fashion Beauty Saloon" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/78 to-ink-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/45" />
 
         <div className="relative flex-1 flex items-end md:items-center">
           <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-10 md:pt-32 md:pb-16">
-            <p className="font-display text-[3.2rem] sm:text-6xl md:text-7xl leading-[0.95] text-rose-300 italic animate-rise">
-              Diana&apos;s
+            <p className="font-display text-[2.8rem] sm:text-5xl md:text-6xl leading-[0.95] text-steel-300 animate-rise">
+              Fashion Beauty
             </p>
             <div className="mt-3 flex items-center gap-3 animate-rise delay-1">
-              <span className="h-px w-8 bg-rose-400" />
-              <p className="eyebrow text-rose-400">Glamour Salon · G-9 Islamabad</p>
+              <span className="h-px w-8 bg-steel-400" />
+              <p className="eyebrow text-steel-400">Saloon · Street 5, G-9 Islamabad</p>
             </div>
             <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl text-ink-50 font-normal leading-snug max-w-xl animate-rise delay-2">
-              Glamour-ready beauty care in G-9 Markaz
+              Hair and beauty care, a phone call away
             </h1>
             <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
-              Bridal looks, party makeup, hair and skin care — book on WhatsApp at {salon.phoneDisplay}.
+              Bridal looks, hair, facials and nails — book by calling {salon.phoneDisplay}. No WhatsApp listing.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
-              <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Book on WhatsApp
+              <a href={`tel:${salon.phone}`} className="btn-primary">
+                Call to Book
               </a>
               <Link href="/services/" className="btn-ghost">View Services</Link>
             </div>
           </div>
         </div>
 
-        <div className="relative border-t border-rose-400/20 bg-ink-950/75 backdrop-blur-md">
+        <div className="relative border-t border-steel-400/20 bg-ink-950/75 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 md:py-6 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-0 md:divide-x md:divide-white/10">
             {highlights.map((item, i) => (
               <div key={item.label} className="md:px-6 first:md:pl-0 last:md:pr-0 animate-rise" style={{ animationDelay: `${0.35 + i * 0.08}s` }}>
-                <p className="font-display text-lg md:text-xl text-rose-300 leading-tight">{item.value}</p>
+                <p className="font-display text-lg md:text-xl text-steel-300 leading-tight">{item.value}</p>
                 <p className="mt-1 eyebrow text-ink-400">{item.label}</p>
               </div>
             ))}
@@ -71,11 +71,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14" data-reveal>
             <div className="max-w-xl">
-              <p className="eyebrow text-rose-600 mb-3">Services</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Looks for every occasion</h2>
+              <p className="eyebrow text-steel-600 mb-3">Services</p>
+              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Crafted for every look</h2>
             </div>
             <p className="text-ink-600 text-sm md:text-base max-w-sm leading-relaxed">
-              Bridal glam, party makeup, hair, facials and nails — polished results without the fuss.
+              From bridal glam to everyday hair and skin care — call ahead to reserve your slot.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
                     <h3 className="font-display text-2xl text-ink-50">{service.name}</h3>
-                    <p className="mt-1 text-xs tracking-[0.16em] uppercase text-rose-300">From {formatPrice(service.priceFrom)}</p>
+                    <p className="mt-1 text-xs tracking-[0.16em] uppercase text-steel-300">From {formatPrice(service.priceFrom)}</p>
                   </div>
                 </div>
                 <p className="mt-3 text-ink-600 text-sm leading-relaxed">{service.description}</p>
@@ -97,9 +97,9 @@ export default function HomePage() {
           </div>
 
           <div className="mt-12" data-reveal>
-            <Link href="/services/" className="eyebrow text-ink-800 hover:text-rose-600 transition-colors inline-flex items-center gap-3 group">
+            <Link href="/services/" className="eyebrow text-ink-800 hover:text-steel-600 transition-colors inline-flex items-center gap-3 group">
               Full menu & packages
-              <span className="h-px w-8 bg-ink-400 group-hover:w-12 group-hover:bg-rose-500 transition-all duration-300" />
+              <span className="h-px w-8 bg-ink-400 group-hover:w-12 group-hover:bg-steel-500 transition-all duration-300" />
             </Link>
           </div>
         </div>
@@ -109,22 +109,22 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/party.jpg")} alt="Makeup at Diana's" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
-            <div className="absolute inset-4 border border-rose-400/30 pointer-events-none" />
+            <img src={asset("/images/hair.jpg")} alt="Hair styling at Fashion Beauty" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-4 border border-steel-400/30 pointer-events-none" />
           </div>
           <div data-reveal="right">
-            <p className="eyebrow text-rose-400 mb-4">Why Diana&apos;s</p>
+            <p className="eyebrow text-steel-400 mb-4">Why Fashion Beauty</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink-50 leading-tight">
-              A local glamour salon in G-9 Markaz
+              A local salon on Street 5, G-9
             </h2>
             <div className="accent-rule w-16 my-6" />
             <p className="text-ink-300 leading-relaxed">
-              Diana&apos;s Glamour Salon is listed in G-9 Markaz with a mobile WhatsApp number — easy to reach for bridal trials, party looks and everyday beauty.
+              Fashion Beauty Saloon is listed with a mobile number only — no website and no WhatsApp channel online. This demo gives them a clear place to show services and invite clients to call.
             </p>
             <p className="mt-4 text-ink-400 leading-relaxed text-sm">
-              Call or message <strong className="text-rose-300">{salon.phoneDisplay}</strong> to book.
+              Call <strong className="text-steel-300">{salon.phoneDisplay}</strong> to book.
             </p>
-            <Link href="/about/" className="btn-primary mt-8">About Diana&apos;s</Link>
+            <Link href="/about/" className="btn-primary mt-8">About Us</Link>
           </div>
         </div>
       </section>
@@ -132,21 +132,21 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-ink-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div data-reveal="left">
-            <p className="eyebrow text-rose-600 mb-3">Visit</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in G-9 Markaz</h2>
+            <p className="eyebrow text-steel-600 mb-3">Visit</p>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in G-9</h2>
             <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
-              Message ahead for bridal appointments, party makeup and hair services.
+              Call ahead for bridal appointments, hair services and beauty treatments.
             </p>
           </div>
           <div className="border border-ink-300/80 bg-ink-50 p-7 md:p-8" data-reveal="right">
             {hours.map((item) => (
               <div key={item.day} className="flex justify-between gap-4 border-b border-ink-200 pb-4 mb-4 last:border-0 last:pb-0 last:mb-0">
                 <span className="text-ink-800 text-sm">{item.day}</span>
-                <span className="text-rose-600 text-sm tracking-wide">{item.hours}</span>
+                <span className="text-steel-600 text-sm tracking-wide">{item.hours}</span>
               </div>
             ))}
             <p className="mt-5 text-xs text-ink-500 leading-relaxed">{salon.address.full}</p>
-            <p className="mt-2 text-[11px] text-ink-400">Hours suggested for this demo — confirm when booking.</p>
+            <p className="mt-2 text-[11px] text-ink-400">Hours suggested for this demo — confirm when calling.</p>
           </div>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function HomePage() {
       <section className="py-20 md:py-24 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12" data-reveal>
-            <p className="eyebrow text-rose-600 mb-3">Testimonials</p>
+            <p className="eyebrow text-steel-600 mb-3">Testimonials</p>
             <h2 className="font-display text-4xl text-ink-950">Client notes</h2>
             <div className="accent-rule w-20 mx-auto mt-5" />
             <p className="mt-3 text-xs text-ink-500">Sample testimonials for this demo website.</p>
@@ -178,10 +178,10 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/bridal.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-ink-950/85" />
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
-          <p className="eyebrow text-rose-400 mb-4">Book Diana&apos;s</p>
-          <h2 className="font-display text-3xl md:text-5xl text-ink-50">Ready for your next look?</h2>
+          <p className="eyebrow text-steel-400 mb-4">Book by phone</p>
+          <h2 className="font-display text-3xl md:text-5xl text-ink-50">Ready for your next appointment?</h2>
           <p className="mt-4 text-ink-300 text-sm md:text-base">
-            WhatsApp or call Diana&apos;s Glamour Salon in G-9 Markaz.
+            Call Fashion Beauty Saloon in G-9 to reserve your time.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a href={`tel:${salon.phone}`} className="btn-primary">{salon.phoneDisplay}</a>
