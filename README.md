@@ -1,8 +1,8 @@
-# Allure Salon & Spa — Demo Website
+# Jasmine Beauty Salon & SPA — Demo Website
 
-Premium demo site for **Allure Salon & Spa** (F-10/2, Islamabad) — a salon with strong social presence but no dedicated website.
+Premium demo site for **Jasmine Beauty Salon & SPA** (7K, F-10 Markaz, Islamabad) — a salon listed online without a dedicated website.
 
-## Live (GitHub Pages)
+## Live
 
 **https://saimawan185.github.io/demo_web/**
 
@@ -10,24 +10,19 @@ Premium demo site for **Allure Salon & Spa** (F-10/2, Islamabad) — a salon wit
 
 | | |
 |--|--|
-| **Name** | Allure Salon & Spa |
-| **Address** | Street 14, Tariq Market, F-10/2, Islamabad |
-| **Phone** | (051) 237-0345 |
-| **Hours** | Daily 10:30 AM – 7:45 PM |
-| **Social** | [Facebook](https://www.facebook.com/allureislamabad/) · [Instagram](https://www.instagram.com/alluresalonspaofficial/) |
+| **Name** | Jasmine Beauty Salon & SPA |
+| **Address** | 7K, F-10 Markaz, Islamabad |
+| **Phone** | (051) 434-9949 |
+| **Hours** | Suggested: Daily 11:00 AM – 8:00 PM |
 
-## Pages
-
-Home · About · Services & Prices · Contact · Privacy Policy
-
-## Develop locally
+## Develop
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/demo_web/](http://localhost:3000/demo_web/)
+Open http://localhost:3000/demo_web/
 
 ## Deploy
 
@@ -35,6 +30,4 @@ Open [http://localhost:3000/demo_web/](http://localhost:3000/demo_web/)
 npm run build
 ```
 
-Upload the `out/` folder, or push to `main` (GitHub Actions) / `gh-pages`.
-
-Configured with `basePath: /demo_web` for GitHub Pages project site.
+Configured with `basePath: /demo_web` for GitHub Pages.

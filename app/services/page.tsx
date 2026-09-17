@@ -3,7 +3,7 @@ import { services, packages, formatPrice, salon, asset } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services & Prices",
-  description: "Allure Salon & Spa service menu with indicative PKR pricing — bridal, hair, spa and nails in Islamabad.",
+  description: "Jasmine Beauty Salon & SPA services and indicative prices in F-10 Markaz, Islamabad.",
 };
 
 export default function ServicesPage() {
@@ -11,20 +11,14 @@ export default function ServicesPage() {
     <>
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={asset("/images/hair.jpg")}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-kenburns"
-        />
+        <img src={asset("/images/hair.jpg")} alt="" className="absolute inset-0 w-full h-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-ink-950/80" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="eyebrow text-gold-400 mb-4 animate-rise">The Menu</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 font-medium animate-rise delay-1">
-            Services & Prices
-          </h1>
-          <div className="gold-rule w-16 mx-auto mt-6 animate-rise delay-2" />
+          <p className="eyebrow text-sage-400 mb-4 animate-rise">The Menu</p>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">Services & Prices</h1>
+          <div className="sage-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto text-sm md:text-base animate-rise delay-2">
-            Demo pricing for planning — final rates depend on look complexity, hair length and products used.
+            Demo pricing for planning — confirm final rates when you book.
           </p>
         </div>
       </section>
@@ -33,20 +27,10 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
-              <article
-                key={service.id}
-                className="group"
-                data-reveal
-                data-reveal-delay={String((i % 3) + 1)}
-              >
+              <article key={service.id} className="group" data-reveal data-reveal-delay={String((i % 3) + 1)}>
                 <div className="service-frame relative aspect-[5/4] overflow-hidden bg-ink-200">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="img-zoom absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  <img src={service.image} alt={service.name} className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="pt-4">
                   <div className="flex items-start justify-between gap-3">
@@ -54,7 +38,7 @@ export default function ServicesPage() {
                       <h2 className="font-display text-xl md:text-2xl text-ink-950">{service.name}</h2>
                       <p className="text-[11px] tracking-[0.16em] uppercase text-ink-400 mt-1">{service.duration}</p>
                     </div>
-                    <p className="text-gold-600 font-semibold text-sm whitespace-nowrap tracking-wide">
+                    <p className="text-sage-600 font-semibold text-sm whitespace-nowrap tracking-wide">
                       {formatPrice(service.priceFrom)}+
                     </p>
                   </div>
@@ -68,15 +52,10 @@ export default function ServicesPage() {
             <h3 className="font-display text-2xl text-ink-950 mb-6">Signature packages</h3>
             <div className="grid sm:grid-cols-3 gap-4">
               {packages.map((pkg, i) => (
-                <div
-                  key={pkg.name}
-                  className="border border-ink-200 p-5 hover:border-gold-400/60 transition-colors"
-                  data-reveal
-                  data-reveal-delay={String(i + 1)}
-                >
+                <div key={pkg.name} className="border border-ink-200 p-5 hover:border-sage-400/60 transition-colors" data-reveal data-reveal-delay={String(i + 1)}>
                   <h4 className="font-display text-lg text-ink-950">{pkg.name}</h4>
                   <p className="text-sm text-ink-500 mt-1">{pkg.desc}</p>
-                  <p className="text-gold-600 font-semibold mt-3 text-sm tracking-wide">{formatPrice(pkg.price)}</p>
+                  <p className="text-sage-600 font-semibold mt-3 text-sm tracking-wide">{formatPrice(pkg.price)}</p>
                 </div>
               ))}
             </div>
@@ -85,14 +64,8 @@ export default function ServicesPage() {
           <p className="text-center text-xs text-ink-500 pt-8 tracking-wide" data-reveal>
             * Dummy prices for website demo. Confirm current rates when you book.
           </p>
-
           <div className="text-center pt-6" data-reveal>
-            <a
-              href={salon.social.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-dark"
-            >
+            <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-dark">
               Book on WhatsApp
             </a>
           </div>

@@ -17,17 +17,15 @@ export default function ContactForm() {
         <p className="font-display text-2xl text-ink-950">Thank you</p>
         <p className="text-sm text-ink-600 mt-3">
           This is a demo form. Please call{" "}
-          <a href={`tel:${salon.phone}`} className="text-gold-600 font-medium">
-            {salon.phoneDisplay}
-          </a>{" "}
-          or message on WhatsApp to book.
+          <a href={`tel:${salon.phone}`} className="text-sage-600 font-medium">{salon.phoneDisplay}</a>{" "}
+          or WhatsApp to book.
         </p>
       </div>
     );
   }
 
   const field =
-    "w-full px-4 py-3 border border-ink-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 outline-none transition-all duration-300 bg-ink-50 focus:bg-white text-sm";
+    "w-full px-4 py-3 border border-ink-200 focus:border-sage-400 focus:ring-1 focus:ring-sage-400/30 outline-none transition-all duration-300 bg-ink-50 focus:bg-white text-sm";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -53,17 +51,9 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="message" className="eyebrow text-ink-500 mb-2 block">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          className={`${field} resize-none`}
-          placeholder="Preferred date, event type, any notes..."
-        />
+        <textarea id="message" name="message" rows={4} className={`${field} resize-none`} placeholder="Preferred date, any notes..." />
       </div>
-      <button type="submit" className="btn-dark w-full">
-        Send Message
-      </button>
+      <button type="submit" className="btn-dark w-full">Send Message</button>
     </form>
   );
 }

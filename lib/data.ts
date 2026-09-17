@@ -1,4 +1,4 @@
-/** Must match next.config.ts basePath for GitHub Pages static assets */
+/** Must match next.config.ts basePath for GitHub Pages */
 export const basePath = "/demo_web";
 
 export function asset(path: string): string {
@@ -7,39 +7,34 @@ export function asset(path: string): string {
 }
 
 export const salon = {
-  name: "Allure Salon & Spa",
-  tagline: "Beauty, Bridal & Wellness in F-10",
-  rating: 4.7,
-  reviewCount: 180,
-  phone: "0512370345",
-  phoneDisplay: "(051) 237-0345",
-  phoneAlt: "+92 51 2370345",
-  email: "hello@alluresalon.pk",
+  name: "Jasmine Beauty Salon & SPA",
+  shortName: "Jasmine",
+  tagline: "Beauty & Spa Care in F-10 Markaz",
+  phone: "0514349949",
+  phoneDisplay: "(051) 434-9949",
+  email: "hello@jasminesalon.pk",
   address: {
-    street: "Street 14, Tariq Market",
-    area: "F-10/2",
+    street: "7K, F-10 Markaz",
+    area: "F-10",
     city: "Islamabad",
     postal: "44000",
     country: "Pakistan",
-    full: "Street 14, Tariq Market, F-10/2, Islamabad, Pakistan",
+    full: "7K, F-10 Markaz, Islamabad, Pakistan",
   },
-  branches: [
-    "F-10/2, Tariq Market, Islamabad",
-    "Bahria Town Phase 6 (bridal & spa)",
-  ],
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Allure+Salon+%26+Spa+F-10+Islamabad",
+    "https://www.google.com/maps/search/?api=1&query=Jasmine+Beauty+Salon+SPA+F-10+Markaz+Islamabad",
   mapsEmbed:
-    "https://www.google.com/maps?q=Allure+Salon+%26+Spa+Street+14+Tariq+Market+F-10%2F2+Islamabad&output=embed",
+    "https://www.google.com/maps?q=Jasmine+Beauty+Salon+%26+SPA+F-10+Markaz+7K+Islamabad&output=embed",
   social: {
-    facebook: "https://www.facebook.com/allureislamabad/",
-    instagram: "https://www.instagram.com/alluresalonspaofficial/",
-    whatsapp: "https://wa.me/92512370345",
+    facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
+    whatsapp: "https://wa.me/92514349949",
   },
 };
 
+/** Suggested hours — listing hours were incomplete online */
 export const hours = [
-  { day: "Monday – Sunday", hours: "10:30 AM – 7:45 PM" },
+  { day: "Monday – Sunday", hours: "11:00 AM – 8:00 PM" },
 ];
 
 export const heroImage = asset("/images/hero.jpg");
@@ -48,56 +43,32 @@ export const services = [
   {
     id: "bridal-makeup",
     name: "Bridal Makeup",
-    description: "Mehndi, Barat & Walima looks crafted for lasting camera-ready glam.",
-    priceFrom: 25000,
+    description: "Mehndi, Barat and Walima looks finished for lasting, camera-ready glam.",
+    priceFrom: 22000,
     duration: "2–3 hrs",
     image: asset("/images/bridal.jpg"),
   },
   {
     id: "party-makeup",
     name: "Party Makeup",
-    description: "Evening and event makeup with soft glam or bold finishes.",
-    priceFrom: 8000,
+    description: "Soft glam to bold evening makeup for dinners, events and celebrations.",
+    priceFrom: 7000,
     duration: "60–90 min",
     image: asset("/images/party.jpg"),
   },
   {
     id: "hairstyling",
     name: "Hairstyling & Blow Dry",
-    description: "Cuts, colour consults, blowouts and occasion updos.",
-    priceFrom: 2500,
+    description: "Cuts, blowouts and occasion styling for everyday polish or events.",
+    priceFrom: 2200,
     duration: "45–90 min",
     image: asset("/images/hair.jpg"),
   },
   {
-    id: "keratin",
-    name: "Keratin & Hair Treatments",
-    description: "Smoothing and repair treatments for healthy, shiny hair.",
-    priceFrom: 12000,
-    duration: "2–3 hrs",
-    image: asset("/images/keratin.jpg"),
-  },
-  {
-    id: "manicure",
-    name: "Manicure",
-    description: "Classic and gel manicures with clean, polished finishes.",
-    priceFrom: 1500,
-    duration: "30–45 min",
-    image: asset("/images/manicure.jpg"),
-  },
-  {
-    id: "pedicure",
-    name: "Pedicure",
-    description: "Relaxing foot care with scrub, massage and polish.",
-    priceFrom: 1800,
-    duration: "45–60 min",
-    image: asset("/images/pedicure.jpg"),
-  },
-  {
     id: "spa",
     name: "Spa & Facials",
-    description: "Facials, glow treatments and spa rituals for skin refresh.",
-    priceFrom: 4500,
+    description: "Facials and spa rituals to refresh skin and restore a healthy glow.",
+    priceFrom: 4000,
     duration: "45–90 min",
     image: asset("/images/spa.jpg"),
   },
@@ -105,56 +76,68 @@ export const services = [
     id: "massage",
     name: "Massage Therapy",
     description: "Relaxing body massage to unwind before events or after a long week.",
-    priceFrom: 4000,
+    priceFrom: 3500,
     duration: "60–90 min",
     image: asset("/images/massage.jpg"),
+  },
+  {
+    id: "manicure",
+    name: "Manicure",
+    description: "Classic and gel manicures with clean, polished finishing.",
+    priceFrom: 1200,
+    duration: "30–45 min",
+    image: asset("/images/manicure.jpg"),
+  },
+  {
+    id: "pedicure",
+    name: "Pedicure",
+    description: "Foot care with scrub, massage and polish for soft, groomed feet.",
+    priceFrom: 1500,
+    duration: "45–60 min",
+    image: asset("/images/pedicure.jpg"),
+  },
+  {
+    id: "keratin",
+    name: "Hair Treatments",
+    description: "Smoothing and repair treatments for healthier, shinier hair.",
+    priceFrom: 10000,
+    duration: "2–3 hrs",
+    image: asset("/images/keratin.jpg"),
   },
   {
     id: "waxing",
     name: "Waxing",
     description: "Full body and targeted waxing with gentle salon-grade products.",
-    priceFrom: 1200,
+    priceFrom: 1000,
     duration: "20–60 min",
     image: asset("/images/waxing.jpg"),
   },
 ];
 
 export const packages = [
-  {
-    name: "Mehndi Glow",
-    price: 18000,
-    desc: "Soft bridal trial makeup + styled hair",
-  },
-  {
-    name: "Barat Complete",
-    price: 35000,
-    desc: "Full bridal makeup, hair & touch-up kit",
-  },
-  {
-    name: "Spa Escape",
-    price: 9000,
-    desc: "Facial + 60-min massage + mani",
-  },
+  { name: "Bridal Soft Glow", price: 16000, desc: "Trial makeup + styled hair" },
+  { name: "Barat Complete", price: 32000, desc: "Full bridal makeup, hair & touch-up" },
+  { name: "Spa Refresh", price: 7500, desc: "Facial + 60-min massage" },
 ];
 
 export const reviews = [
   {
-    name: "Ayesha R.",
+    name: "Amina S.",
     rating: 5,
-    text: "Got my Barat makeup done here — stayed flawless all night and looked amazing in photos. The team was calm, professional and so attentive.",
+    text: "Got my party makeup and blow-dry done — soft, elegant finish and the spa area felt calm and clean. Highly recommend for F-10.",
     time: "Recent client",
   },
   {
-    name: "Sana M.",
+    name: "Hira N.",
     rating: 5,
-    text: "Love their spa and facial treatments. Clean space, friendly staff, and my skin felt refreshed for days. Highly recommend the F-10 branch.",
+    text: "Came for a facial and manicure. Staff listened carefully and the results looked fresh for days. Will book again.",
     time: "Regular visitor",
   },
   {
-    name: "Hira K.",
+    name: "Saba K.",
     rating: 5,
-    text: "Came for a party look and blow dry. Exact shade I asked for, finished on time, and the vibe was premium without feeling rushed.",
-    time: "Event client",
+    text: "Bridal trial was exactly what I asked for. Professional team, good timing, and a premium feel without being rushed.",
+    time: "Bridal client",
   },
 ];
 
