@@ -26,29 +26,29 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ${
         scrolled
-          ? "bg-ink-950/97 backdrop-blur-xl border-steel-400/25"
+          ? "bg-ink-950/97 backdrop-blur-xl border-amber-400/25"
           : "bg-ink-950/85 backdrop-blur-md border-white/10"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           <Link href="/" className="group">
-            <span className="font-display text-2xl md:text-[1.7rem] text-steel-300 transition-colors group-hover:text-steel-400">
-              Fashion Beauty
+            <span className="font-display text-2xl md:text-[1.75rem] text-amber-300 italic transition-colors group-hover:text-amber-400">
+              Abeera&apos;s
             </span>
             <span className="block text-[9px] md:text-[10px] text-ink-400 tracking-[0.28em] uppercase -mt-0.5">
-              Saloon · G-9
+              Beauty Salon · Ladies Only
             </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="nav-link text-ink-300 hover:text-steel-300 transition-colors">
+              <Link key={link.href} href={link.href} className="nav-link text-ink-300 hover:text-amber-300 transition-colors">
                 {link.label}
               </Link>
             ))}
-            <a href={`tel:${salon.phone}`} className="btn-primary !py-2.5 !px-4">
-              Call to Book
+            <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2.5 !px-4">
+              WhatsApp
             </a>
           </nav>
 
@@ -66,12 +66,12 @@ export default function Header() {
         {open && (
           <nav className="md:hidden pb-5 border-t border-white/10 pt-4 flex flex-col gap-3 animate-menu-in">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-ink-100 hover:text-steel-300 py-2 text-sm tracking-[0.14em] uppercase" onClick={() => setOpen(false)}>
+              <Link key={link.href} href={link.href} className="text-ink-100 hover:text-amber-300 py-2 text-sm tracking-[0.14em] uppercase" onClick={() => setOpen(false)}>
                 {link.label}
               </Link>
             ))}
-            <a href={`tel:${salon.phone}`} className="btn-primary mt-2 text-center">
-              Call to Book
+            <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary mt-2 text-center">
+              WhatsApp
             </a>
           </nav>
         )}

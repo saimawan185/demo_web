@@ -3,16 +3,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RevealInit from "@/components/RevealInit";
 import PageTransition from "@/components/PageTransition";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { salon } from "@/lib/data";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Beauty Salon in G-9, Islamabad`,
+    default: `${salon.name} | Ladies Salon & Spa in G-13, Islamabad`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Fashion Beauty Saloon — hair and beauty services on Street 5, G-9 Islamabad. Call +92 300 5339157 to book.",
+    "Abeera's Beauty Salon — ladies-only salon, spa and training centre in G-13/1 Islamabad. Book on WhatsApp +92 334 5414171.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Outfit:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
