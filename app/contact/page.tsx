@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import SocialLinks from "@/components/SocialLinks";
 import { salon, hours } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Contact Ayesha's Salon Official in F-11 Markaz, Islamabad. WhatsApp +92 334 3777040.",
 };
-
-const socialLinks = [
-  { label: "WhatsApp", href: salon.social.whatsapp },
-  { label: "Instagram", href: salon.social.instagram },
-  { label: "Facebook", href: salon.social.facebook },
-  { label: "TikTok", href: salon.social.tiktok },
-  { label: "Google Reviews", href: salon.googleReviewsUrl },
-];
 
 export default function ContactPage() {
   return (
@@ -57,21 +50,8 @@ export default function ContactPage() {
                   ))}
                 </div>
                 <div>
-                  <p className="eyebrow text-ink-500 mb-3">Social</p>
-                  <ul className="flex flex-wrap gap-x-4 gap-y-2">
-                    {socialLinks.map((link) => (
-                      <li key={link.label}>
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-ink-700 hover:text-amber-600 transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="eyebrow text-ink-500 mb-4">Follow us</p>
+                  <SocialLinks variant="light" size="md" />
                 </div>
               </div>
               <div className="mt-10 flex flex-wrap gap-3">

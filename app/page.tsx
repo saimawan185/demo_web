@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { salon, services, reviews, hours, formatPrice, heroImage, asset } from "@/lib/data";
+import { socialPlatforms, SocialIcon } from "@/components/SocialLinks";
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -18,14 +19,6 @@ const highlights = [
   { label: "Google", value: `${salon.rating}★` },
   { label: "Reviews", value: `${salon.reviewCount}+` },
   { label: "Booking", value: "WhatsApp" },
-];
-
-const socialPlatforms = [
-  { name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
-  { name: "Instagram", href: salon.social.instagram, hint: "@ayeshasbeautysalon01" },
-  { name: "Facebook", href: salon.social.facebook, hint: "Ayesha's Salon Official" },
-  { name: "TikTok", href: salon.social.tiktok, hint: "@ayeshassalonofficial" },
-  { name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 
 export default function HomePage() {
@@ -147,13 +140,17 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4" data-reveal>
             {socialPlatforms.map((platform) => (
               <a
-                key={platform.name}
+                key={platform.key}
                 href={platform.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border border-ink-300/80 bg-ink-50 p-5 text-center hover:border-amber-500 transition-colors"
+                aria-label={platform.name}
+                className="group border border-ink-300/80 bg-ink-50 p-5 md:p-6 text-center hover:border-amber-500 transition-colors"
               >
-                <p className="font-display text-lg text-ink-950 group-hover:text-amber-600 transition-colors">{platform.name}</p>
+                <span className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink-200 text-ink-800 group-hover:border-amber-500 group-hover:text-amber-600 transition-colors">
+                  <SocialIcon name={platform.key} className="w-5 h-5" />
+                </span>
+                <p className="mt-4 font-display text-lg text-ink-950 group-hover:text-amber-600 transition-colors">{platform.name}</p>
                 <p className="mt-2 text-[11px] tracking-wide text-ink-500 leading-snug">{platform.hint}</p>
               </a>
             ))}

@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { salon, hours } from "@/lib/data";
-
-const socialLinks = [
-  { label: "WhatsApp", href: salon.social.whatsapp },
-  { label: "Instagram", href: salon.social.instagram },
-  { label: "Facebook", href: salon.social.facebook },
-  { label: "TikTok", href: salon.social.tiktok },
-  { label: "Google Reviews", href: salon.googleReviewsUrl },
-];
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Footer() {
   return (
@@ -53,20 +46,7 @@ export default function Footer() {
               </li>
               <li className="text-ink-500 leading-relaxed">{salon.address.full}</li>
             </ul>
-            <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
-              {socialLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] tracking-[0.14em] uppercase text-ink-400 hover:text-amber-300 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <SocialLinks variant="dark" size="sm" className="mt-5" />
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] tracking-wide text-ink-600">
