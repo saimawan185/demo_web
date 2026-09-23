@@ -4,7 +4,7 @@ import { salon } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "About Abeera's Beauty Salon — ladies-only salon & spa in G-13, Islamabad.",
+  description: "About Ayesha's Salon Official — women-owned beauty salon in F-11 Markaz, Islamabad.",
 };
 
 export default function AboutPage() {
@@ -13,10 +13,10 @@ export default function AboutPage() {
       <section className="bg-ink-950 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <p className="eyebrow text-amber-400 mb-4 animate-rise">Our Story</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About Abeera&apos;s</h1>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About Ayesha&apos;s</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto leading-relaxed animate-rise delay-2">
-            A ladies-only beauty salon, spa and training centre in G-13/1.
+            Women-owned beauty salon in F-11 Markaz, Islamabad.
           </p>
         </div>
       </section>
@@ -26,25 +26,25 @@ export default function AboutPage() {
           <div className="space-y-4 text-ink-700 leading-relaxed" data-reveal="left">
             <h2 className="font-display text-3xl text-ink-950 mb-6">Who we are</h2>
             <p>
-              <strong className="text-ink-950">{salon.name}</strong> is located at Shakeel Arcade, Street 85, G-13/1, Islamabad. The studio is ladies-only and focuses on salon, spa and training services.
+              <strong className="text-ink-950">{salon.name}</strong> is located at 1 Select, Meher Ali Road, Street 1, near Sindh Bank in F-11 Markaz, Islamabad.
             </p>
             <p>
-              Clients rate the experience highly online (~{salon.rating}★ from {salon.reviewCount}+ reviews), but the business did not have a dedicated website — only listings and a mobile number.
+              Clients rate the experience highly on Google — <strong className="text-ink-950">{salon.rating}★ from {salon.reviewCount} reviews</strong> — with strong praise for bridal, Walima, Shalima and party makeup. Until now the salon had no dedicated website, only Instagram, Facebook, TikTok and phone listings.
             </p>
             <p>
-              Book on WhatsApp or call <strong className="text-ink-950">{salon.phoneDisplay}</strong>.
+              Book on WhatsApp or call <strong className="text-ink-950">{salon.phoneDisplay}</strong>. Open daily 11:00 AM – 8:00 PM.
             </p>
           </div>
           <div className="bg-white p-8 border border-ink-200" data-reveal="right">
             <h3 className="font-display text-2xl text-ink-950 mb-6">What we offer</h3>
             <ul className="space-y-4">
               {[
-                "Bridal & party makeup",
+                "Bridal, Barat, Walima & Shalima makeup",
+                "Party and event glam",
                 "Hairstyling and treatments",
                 "Spa facials and massage",
                 "Manicure & pedicure",
                 "Waxing and skin care",
-                "Ladies-only private setting",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-ink-700 text-sm">
                   <span className="text-amber-500 shrink-0">—</span>

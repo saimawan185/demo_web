@@ -14,10 +14,18 @@ function Stars({ rating }: { rating: number }) {
 }
 
 const highlights = [
-  { label: "Location", value: "G-13/1" },
-  { label: "Rating", value: `${salon.rating}★` },
-  { label: "Focus", value: "Ladies Only" },
+  { label: "Location", value: "F-11 Markaz" },
+  { label: "Google", value: `${salon.rating}★` },
+  { label: "Reviews", value: `${salon.reviewCount}+` },
   { label: "Booking", value: "WhatsApp" },
+];
+
+const socialPlatforms = [
+  { name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
+  { name: "Instagram", href: salon.social.instagram, hint: "@ayeshasbeautysalon01" },
+  { name: "Facebook", href: salon.social.facebook, hint: "Ayesha's Salon Official" },
+  { name: "TikTok", href: salon.social.tiktok, hint: "@ayeshassalonofficial" },
+  { name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 
 export default function HomePage() {
@@ -27,24 +35,24 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88svh] md:min-h-[92vh] flex flex-col overflow-hidden bg-ink-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={heroImage} alt="Abeera's Beauty Salon" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
+        <img src={heroImage} alt="Ayesha's Salon Official" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/78 to-ink-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/45" />
 
         <div className="relative flex-1 flex items-end md:items-center">
           <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-10 md:pt-32 md:pb-16">
             <p className="font-display text-[3.2rem] sm:text-6xl md:text-7xl leading-[0.95] text-amber-300 italic animate-rise">
-              Abeera&apos;s
+              Ayesha&apos;s
             </p>
             <div className="mt-3 flex items-center gap-3 animate-rise delay-1">
               <span className="h-px w-8 bg-amber-400" />
-              <p className="eyebrow text-amber-400">Ladies Salon & Spa · G-13 Islamabad</p>
+              <p className="eyebrow text-amber-400">Salon Official · F-11 Markaz Islamabad</p>
             </div>
             <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl text-ink-50 font-normal leading-snug max-w-xl animate-rise delay-2">
-              A private ladies-only beauty and spa studio
+              Bridal & party glam in the heart of F-11
             </h1>
             <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
-              Bridal glam, hair, spa and training — book on WhatsApp at {salon.phoneDisplay}.
+              Women-owned beauty salon — book on WhatsApp at {salon.phoneDisplay}.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
               <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -72,10 +80,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14" data-reveal>
             <div className="max-w-xl">
               <p className="eyebrow text-amber-600 mb-3">Services</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Beauty, spa & bridal care</h2>
+              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Makeup, hair & spa care</h2>
             </div>
             <p className="text-ink-600 text-sm md:text-base max-w-sm leading-relaxed">
-              From bridal looks to spa refresh — hair, makeup, nails and wellness for ladies.
+              From bridal and Shalima looks to everyday beauty — hair, makeup, nails and wellness.
             </p>
           </div>
 
@@ -109,36 +117,60 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/spa.jpg")} alt="Spa at Abeera's" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <img src={asset("/images/bridal.jpg")} alt="Bridal glam at Ayesha's" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-4 border border-amber-400/30 pointer-events-none" />
           </div>
           <div data-reveal="right">
-            <p className="eyebrow text-amber-400 mb-4">Why Abeera&apos;s</p>
+            <p className="eyebrow text-amber-400 mb-4">Why Ayesha&apos;s</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink-50 leading-tight">
-              Ladies-only salon & spa in G-13
+              Women-owned salon in F-11 Markaz
             </h2>
             <div className="accent-rule w-16 my-6" />
             <p className="text-ink-300 leading-relaxed">
-              Abeera&apos;s Beauty Salon is a ladies-only salon, spa and training centre in Shakeel Arcade, Street 85, G-13/1 — rated highly by local clients, without a dedicated website until now.
+              Ayesha&apos;s Salon Official sits near Sindh Bank in F-11 Markaz — known for bridal, Walima and party makeup. Clients rate it {salon.rating}★ on Google across {salon.reviewCount} reviews, yet the salon had no dedicated website until now (only Instagram & socials).
             </p>
             <p className="mt-4 text-ink-400 leading-relaxed text-sm">
               Message on WhatsApp <strong className="text-amber-300">{salon.phoneDisplay}</strong> to book.
             </p>
-            <Link href="/about/" className="btn-primary mt-8">About Abeera&apos;s</Link>
+            <Link href="/about/" className="btn-primary mt-8">About Ayesha&apos;s</Link>
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-20 bg-ink-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10" data-reveal>
+            <p className="eyebrow text-amber-600 mb-3">Connect</p>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">All social platforms</h2>
+            <div className="accent-rule w-20 mx-auto mt-5" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4" data-reveal>
+            {socialPlatforms.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border border-ink-300/80 bg-ink-50 p-5 text-center hover:border-amber-500 transition-colors"
+              >
+                <p className="font-display text-lg text-ink-950 group-hover:text-amber-600 transition-colors">{platform.name}</p>
+                <p className="mt-2 text-[11px] tracking-wide text-ink-500 leading-snug">{platform.hint}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-ink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div data-reveal="left">
             <p className="eyebrow text-amber-600 mb-3">Visit</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in G-13/1</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in F-11 Markaz</h2>
             <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
-              Book ahead for bridal trials, spa sessions and everyday beauty services.
+              Near Sindh Bank on Meher Ali Road — book ahead for bridal trials, party glam and everyday beauty.
             </p>
           </div>
-          <div className="border border-ink-300/80 bg-ink-50 p-7 md:p-8" data-reveal="right">
+          <div className="border border-ink-300/80 bg-white p-7 md:p-8" data-reveal="right">
             {hours.map((item) => (
               <div key={item.day} className="flex justify-between gap-4 border-b border-ink-200 pb-4 mb-4 last:border-0 last:pb-0 last:mb-0">
                 <span className="text-ink-800 text-sm">{item.day}</span>
@@ -146,23 +178,28 @@ export default function HomePage() {
               </div>
             ))}
             <p className="mt-5 text-xs text-ink-500 leading-relaxed">{salon.address.full}</p>
-            <p className="mt-2 text-[11px] text-ink-400">Hours suggested for this demo — confirm when booking.</p>
+            <a href={salon.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-xs text-amber-600 hover:underline">
+              Open in Google Maps →
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-ink-50">
+      <section className="py-20 md:py-24 bg-ink-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12" data-reveal>
-            <p className="eyebrow text-amber-600 mb-3">Testimonials</p>
-            <h2 className="font-display text-4xl text-ink-950">Client notes</h2>
+            <p className="eyebrow text-amber-600 mb-3">Google Reviews</p>
+            <h2 className="font-display text-4xl text-ink-950">{salon.rating}★ from {salon.reviewCount} clients</h2>
             <div className="accent-rule w-20 mx-auto mt-5" />
-            <p className="mt-3 text-xs text-ink-500">Sample testimonials inspired by public ratings for this demo.</p>
+            <p className="mt-3 text-xs text-ink-500">Selected from public Google Maps reviews for Ayesha&apos;s Salon Official.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {reviews.map((review, i) => (
               <blockquote key={review.name} className="border border-ink-200 bg-white p-7" data-reveal data-reveal-delay={String(i + 1)}>
-                <Stars rating={review.rating} />
+                <div className="flex items-center justify-between gap-3">
+                  <Stars rating={review.rating} />
+                  <span className="text-[10px] tracking-[0.16em] uppercase text-ink-400">{review.source}</span>
+                </div>
                 <p className="mt-5 font-display text-lg text-ink-800 leading-relaxed italic">&ldquo;{review.text}&rdquo;</p>
                 <footer className="mt-6 pt-4 border-t border-ink-100">
                   <cite className="not-italic text-sm tracking-wide text-ink-950">{review.name}</cite>
@@ -171,17 +208,23 @@ export default function HomePage() {
               </blockquote>
             ))}
           </div>
+          <div className="mt-10 text-center" data-reveal>
+            <a href={salon.googleReviewsUrl} target="_blank" rel="noopener noreferrer" className="eyebrow text-ink-800 hover:text-amber-600 transition-colors inline-flex items-center gap-3 group">
+              Read all Google reviews
+              <span className="h-px w-8 bg-ink-400 group-hover:w-12 group-hover:bg-amber-500 transition-all duration-300" />
+            </a>
+          </div>
         </div>
       </section>
 
       <section className="py-20 md:py-24 bg-ink-950 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/bridal.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/party.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-ink-950/85" />
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
-          <p className="eyebrow text-amber-400 mb-4">Book Abeera&apos;s</p>
+          <p className="eyebrow text-amber-400 mb-4">Book Ayesha&apos;s</p>
           <h2 className="font-display text-3xl md:text-5xl text-ink-50">Ready for your next appointment?</h2>
           <p className="mt-4 text-ink-300 text-sm md:text-base">
-            WhatsApp Abeera&apos;s Beauty Salon in G-13 to reserve your time.
+            WhatsApp Ayesha&apos;s Salon Official in F-11 to reserve your time.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">

@@ -1,6 +1,6 @@
-# Abeera's Beauty Salon — Demo Website
+# Ayesha's Salon Official — Demo Website
 
-Premium demo site for **Abeera's Beauty Salon** (ladies-only salon, spa & training centre in G-13/1, Islamabad) — highly rated online without a dedicated website.
+Premium demo site for **Ayesha's Salon Official** (women-owned beauty salon in F-11 Markaz, Islamabad) — rated highly on Google with no dedicated website (Instagram listed as their only “website”).
 
 ## Live
 
@@ -10,11 +10,12 @@ Premium demo site for **Abeera's Beauty Salon** (ladies-only salon, spa & traini
 
 | | |
 |--|--|
-| **Name** | Abeera's Beauty Salon |
-| **Address** | Shakeel Arcade, Street 85, G-13/1, Islamabad |
-| **Phone / WhatsApp** | +92 334 5414171 (`+923345414171`) |
-| **Rating** | ~4.8★ (50+ reviews) |
-| **Hours** | Suggested: Daily 10:00 AM – 9:00 PM |
+| **Name** | Ayesha's Salon Official |
+| **Address** | 1 Select, Meher Ali Road, Street 1, near Sindh Bank, F-11 Markaz, Islamabad |
+| **Phone / WhatsApp** | +92 334 3777040 (`+923343777040`) |
+| **Google rating** | 4.4★ (556 reviews) |
+| **Hours** | Daily 11:00 AM – 8:00 PM |
+| **Social** | WhatsApp, Instagram, Facebook, TikTok, Google Reviews |
 
 Includes a floating WhatsApp button on every page.
 

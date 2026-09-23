@@ -7,36 +7,40 @@ export function asset(path: string): string {
 }
 
 export const salon = {
-  name: "Abeera's Beauty Salon",
-  shortName: "Abeera's",
-  tagline: "Ladies Salon, Spa & Training · G-13",
-  phone: "+923345414171",
-  phoneDisplay: "+92 334 5414171",
-  email: "hello@abeerasbeauty.pk",
-  rating: 4.8,
-  reviewCount: 50,
+  name: "Ayesha's Salon Official",
+  shortName: "Ayesha's",
+  tagline: "Beauty Salon · F-11 Markaz",
+  phone: "+923343777040",
+  phoneDisplay: "+92 334 3777040",
+  email: "hello@ayeshasalon.pk",
+  rating: 4.4,
+  reviewCount: 556,
+  womenOwned: true,
   address: {
-    street: "Shakeel Arcade, Street 85",
-    area: "G-13/1",
+    street: "1 Select, Meher Ali Road, Street 1",
+    area: "near Sindh Bank, F-11 Markaz",
     city: "Islamabad",
-    postal: "44000",
+    postal: "48000",
     country: "Pakistan",
-    full: "Shakeel Arcade, Street 85, G-13/1, Islamabad, Pakistan",
+    full: "1 Select, Meher Ali Road, Street 1, near Sindh Bank, F-11 Markaz, Islamabad, Pakistan",
   },
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Abeera%27s+Beauty+Salon+Street+85+G-13+Islamabad",
+    "https://www.google.com/maps/place/Ayesha's+Salon+Official/@33.6851299,72.9882991,17z",
   mapsEmbed:
-    "https://www.google.com/maps?q=Abeera%27s+Beauty+Salon+Shakeel+Arcade+Street+85+G-13%2F1+Islamabad&output=embed",
+    "https://www.google.com/maps?q=Ayesha%27s+Salon+Official+F-11+Markaz+Islamabad&output=embed",
+  googleReviewsUrl:
+    "https://www.google.com/maps/place/Ayesha's+Salon+Official/@33.6851299,72.9882991,17z/data=!4m8!3m7!1s0x38dfbf9f6758aa07:0x7f07f99ecb3ba370!8m2!3d33.6851299!4d72.9882991!9m1!1b1",
   social: {
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
-    whatsapp: "https://wa.me/923345414171",
+    facebook: "https://www.facebook.com/ayeshassalonofficial/",
+    instagram: "https://www.instagram.com/ayeshasbeautysalon01",
+    tiktok: "https://www.tiktok.com/@ayeshassalonofficial",
+    whatsapp: "https://wa.me/923343777040",
   },
 };
 
-/** Maps listing showed open until 9:00 PM */
+/** Confirmed on Google Maps listing */
 export const hours = [
-  { day: "Monday – Sunday", hours: "10:00 AM – 9:00 PM" },
+  { day: "Monday – Sunday", hours: "11:00 AM – 8:00 PM" },
 ];
 
 export const heroImage = asset("/images/hero.jpg");
@@ -45,7 +49,7 @@ export const services = [
   {
     id: "bridal-makeup",
     name: "Bridal Makeup",
-    description: "Mehndi, Barat and Walima looks finished for lasting, camera-ready glam.",
+    description: "Mehndi, Barat, Walima and Shalima looks finished for lasting, camera-ready glam.",
     priceFrom: 20000,
     duration: "2–3 hrs",
     image: asset("/images/bridal.jpg"),
@@ -69,7 +73,7 @@ export const services = [
   {
     id: "spa",
     name: "Spa & Facials",
-    description: "Facials and spa rituals for refreshed, glowing skin.",
+    description: "Facials and skin rituals for refreshed, glowing skin.",
     priceFrom: 3500,
     duration: "45–90 min",
     image: asset("/images/spa.jpg"),
@@ -77,7 +81,7 @@ export const services = [
   {
     id: "massage",
     name: "Massage Therapy",
-    description: "Relaxing body massage in a ladies-only spa setting.",
+    description: "Relaxing body massage in a calm salon setting.",
     priceFrom: 3000,
     duration: "60–90 min",
     image: asset("/images/massage.jpg"),
@@ -119,27 +123,31 @@ export const services = [
 export const packages = [
   { name: "Bridal Soft Glow", price: 15000, desc: "Trial makeup + styled hair" },
   { name: "Barat Complete", price: 30000, desc: "Full bridal makeup, hair & touch-up" },
-  { name: "Spa Refresh", price: 7000, desc: "Facial + 60-min massage" },
+  { name: "Party Ready", price: 8000, desc: "Party makeup + blowout styling" },
 ];
 
+/** Adapted from public Google Maps reviews for Ayesha's Salon Official */
 export const reviews = [
   {
-    name: "Zoya A.",
+    name: "Bia Hafeez",
     rating: 5,
-    text: "Calm ladies-only space and a careful spa session. Easy to book on WhatsApp and the team was professional throughout.",
-    time: "Recent client",
+    text: "Very good experience — we booked Walima makeup and two party makeups for my brother’s wedding. The looks were beautiful and we got so many compliments.",
+    time: "Google review",
+    source: "Google",
   },
   {
-    name: "Maria B.",
+    name: "Sania Aslam",
     rating: 5,
-    text: "Came for a facial and manicure in G-13. Hygienic, friendly, and worth the visit — one of my favourite local salons.",
-    time: "Regular visitor",
+    text: "My Shalima makeup by Exclusive Makeup by Ayesha was absolutely stunning — flawless, fresh and radiant the entire day. I couldn’t stop admiring the result.",
+    time: "Google review",
+    source: "Google",
   },
   {
-    name: "Hira S.",
+    name: "Abeera Mahnoor",
     rating: 5,
-    text: "Bridal trial looked soft and natural. They take one client with care — felt private and unhurried.",
-    time: "Bridal client",
+    text: "Amazing experience at Ayesha’s Salon. Hannah did my makeup exactly how I wanted — professional, talented, and the finish looked beautiful.",
+    time: "Google review",
+    source: "Google",
   },
 ];
 

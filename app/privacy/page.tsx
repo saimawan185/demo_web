@@ -3,7 +3,7 @@ import { salon } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Abeera's Beauty Salon demo website.",
+  description: "Privacy Policy for the Ayesha's Salon Official demo website.",
 };
 
 export default function PrivacyPage() {
@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="bg-ink-950 pt-28 pb-16 md:pt-36 md:pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="font-display text-4xl md:text-5xl text-ink-50">Privacy Policy</h1>
-          <p className="mt-4 text-ink-400 text-sm">Last updated: September 17, 2026</p>
+          <p className="mt-4 text-ink-400 text-sm">Last updated: September 23, 2026</p>
         </div>
       </section>
 

@@ -4,8 +4,16 @@ import { salon, hours } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact Abeera's Beauty Salon in G-13, Islamabad. WhatsApp +92 334 5414171.",
+  description: "Contact Ayesha's Salon Official in F-11 Markaz, Islamabad. WhatsApp +92 334 3777040.",
 };
+
+const socialLinks = [
+  { label: "WhatsApp", href: salon.social.whatsapp },
+  { label: "Instagram", href: salon.social.instagram },
+  { label: "Facebook", href: salon.social.facebook },
+  { label: "TikTok", href: salon.social.tiktok },
+  { label: "Google Reviews", href: salon.googleReviewsUrl },
+];
 
 export default function ContactPage() {
   return (
@@ -16,7 +24,7 @@ export default function ContactPage() {
           <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">Contact</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto animate-rise delay-2">
-            WhatsApp, call or visit us in G-13/1.
+            WhatsApp, call or visit us in F-11 Markaz.
           </p>
         </div>
       </section>
@@ -41,12 +49,29 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <div>
-                  <p className="eyebrow text-ink-500 mb-2">Suggested Hours</p>
+                  <p className="eyebrow text-ink-500 mb-2">Hours</p>
                   {hours.map((item) => (
                     <p key={item.day} className="text-sm">
                       <span className="font-medium">{item.day}:</span> {item.hours}
                     </p>
                   ))}
+                </div>
+                <div>
+                  <p className="eyebrow text-ink-500 mb-3">Social</p>
+                  <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                    {socialLinks.map((link) => (
+                      <li key={link.label}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-ink-700 hover:text-amber-600 transition-colors"
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="mt-10 flex flex-wrap gap-3">
@@ -66,7 +91,7 @@ export default function ContactPage() {
 
           <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal>
             <iframe
-              title="Abeera's Beauty Salon location"
+              title="Ayesha's Salon Official location"
               src={salon.mapsEmbed}
               width="100%"
               height="100%"

@@ -1,16 +1,24 @@
 import Link from "next/link";
 import { salon, hours } from "@/lib/data";
 
+const socialLinks = [
+  { label: "WhatsApp", href: salon.social.whatsapp },
+  { label: "Instagram", href: salon.social.instagram },
+  { label: "Facebook", href: salon.social.facebook },
+  { label: "TikTok", href: salon.social.tiktok },
+  { label: "Google Reviews", href: salon.googleReviewsUrl },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-ink-950 text-ink-400 border-t border-amber-400/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <p className="font-display text-2xl text-amber-300 italic">Abeera&apos;s</p>
-            <p className="eyebrow text-ink-500 mt-1 mb-4">Beauty Salon · Ladies Only</p>
+            <p className="font-display text-2xl text-amber-300 italic">Ayesha&apos;s</p>
+            <p className="eyebrow text-ink-500 mt-1 mb-4">Salon Official · F-11</p>
             <p className="text-sm leading-relaxed">
-              Salon, spa and training centre in G-13/1, Islamabad.
+              Women-owned beauty salon in F-11 Markaz, Islamabad — bridal, party makeup, hair and spa.
             </p>
           </div>
           <div>
@@ -33,27 +41,36 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="text-[11px] text-ink-600 mt-3">Suggested hours for this demo.</p>
+            <p className="text-[11px] text-ink-600 mt-3">Hours from Google Maps listing.</p>
           </div>
           <div>
-            <h3 className="eyebrow text-amber-400 mb-5">Contact</h3>
+            <h3 className="eyebrow text-amber-400 mb-5">Contact & Social</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href={`tel:${salon.phone}`} className="text-ink-200 hover:text-amber-300 transition-colors">
                   {salon.phoneDisplay}
                 </a>
               </li>
-              <li>
-                <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="text-ink-200 hover:text-amber-300 transition-colors">
-                  WhatsApp booking
-                </a>
-              </li>
               <li className="text-ink-500 leading-relaxed">{salon.address.full}</li>
+            </ul>
+            <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
+              {socialLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] tracking-[0.14em] uppercase text-ink-400 hover:text-amber-300 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] tracking-wide text-ink-600">
-          <p>&copy; {new Date().getFullYear()} Abeera&apos;s Beauty Salon. Demo website.</p>
+          <p>&copy; {new Date().getFullYear()} Ayesha&apos;s Salon Official. Demo website.</p>
           <p>Indicative prices — confirm when booking.</p>
         </div>
       </div>

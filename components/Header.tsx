@@ -34,10 +34,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           <Link href="/" className="group">
             <span className="font-display text-2xl md:text-[1.75rem] text-amber-300 italic transition-colors group-hover:text-amber-400">
-              Abeera&apos;s
+              Ayesha&apos;s
             </span>
             <span className="block text-[9px] md:text-[10px] text-ink-400 tracking-[0.28em] uppercase -mt-0.5">
-              Beauty Salon · Ladies Only
+              Salon Official · F-11
             </span>
           </Link>
 
