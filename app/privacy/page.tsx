@@ -5,7 +5,7 @@ import SocialLinks from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Ayesha's Salon Official demo website.",
+  description: "Privacy Policy for the Dejas Beauty Saloon demo website.",
 };
 
 export default function PrivacyPage() {
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <p className="eyebrow text-amber-400 mb-4 animate-rise">Legal</p>
           <h1 className="font-display text-4xl md:text-5xl text-ink-50 animate-rise delay-1">Privacy Policy</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
-          <p className="mt-6 text-ink-400 text-sm animate-rise delay-2">Last updated: September 23, 2026</p>
+          <p className="mt-6 text-ink-400 text-sm animate-rise delay-2">Last updated: September 25, 2026</p>
           <p className="mt-4 text-ink-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed animate-rise delay-2">
             How the demo website for {salon.name} may handle information you choose to share.
           </p>
@@ -42,23 +42,20 @@ export default function PrivacyPage() {
               <li>Name, phone number and message details you type into the demo contact form</li>
               <li>Contact details shared by phone, WhatsApp or social media when you reach out to book</li>
               <li>Appointment preferences such as service type, preferred date and notes you provide</li>
-              <li>Basic technical usage data (for example pages visited or device type) if analytics are enabled on the hosted site</li>
+              <li>Basic technical usage data if analytics are enabled on the hosted site</li>
               <li>Public interactions on Instagram, Facebook, TikTok or Google Reviews that you choose to post</li>
             </ul>
           </div>
 
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">3. How information may be used</h2>
-            <p className="mb-4">Information you share may be used to:</p>
             <ul className="list-disc pl-6 space-y-3">
               <li>Respond to booking requests and service enquiries</li>
               <li>Confirm appointments, location details and arrival guidance</li>
               <li>Improve the demo website experience and content accuracy</li>
               <li>Share updates about services when you have opted in through WhatsApp or social channels</li>
             </ul>
-            <p className="mt-4">
-              We do not sell personal information. Demo form submissions on this site are not connected to a production database.
-            </p>
+            <p className="mt-4">We do not sell personal information. Demo form submissions on this site are not connected to a production database.</p>
           </div>
 
           <div data-reveal>
@@ -71,20 +68,19 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">5. Third-party platforms</h2>
             <p>
-              Links to WhatsApp, Instagram, Facebook, TikTok and Google Reviews open external services. Once you leave this demo site, those platforms&apos; privacy terms apply. Please review their policies before sharing personal details there.
+              Links to WhatsApp, Instagram, Facebook, TikTok and Google Reviews open external services. Once you leave this demo site, those platforms&apos; privacy terms apply.
             </p>
           </div>
 
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">6. Data retention</h2>
             <p>
-              For a live salon operation, appointment notes and contact messages are typically kept only as long as needed to provide the service and follow up. For this demo website, form entries are not stored on a backend server by default.
+              For a live salon operation, appointment notes and contact messages are typically kept only as long as needed to provide the service. For this demo website, form entries are not stored on a backend server by default.
             </p>
           </div>
 
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">7. Your choices</h2>
-            <p className="mb-4">You may:</p>
             <ul className="list-disc pl-6 space-y-3">
               <li>Contact the salon to update or remove details you previously shared for bookings</li>
               <li>Stop messaging on WhatsApp at any time</li>
@@ -103,7 +99,7 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">9. Policy updates</h2>
             <p>
-              This page may be updated as the demo evolves. The &ldquo;Last updated&rdquo; date at the top reflects the latest revision. Continued use of the site after changes means you accept the revised policy for demo purposes.
+              This page may be updated as the demo evolves. The &ldquo;Last updated&rdquo; date at the top reflects the latest revision.
             </p>
           </div>
 

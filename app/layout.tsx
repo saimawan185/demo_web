@@ -9,11 +9,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Beauty Salon in F-11, Islamabad`,
+    default: `${salon.name} | Beauty Salon in I-10 Markaz, Islamabad`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Ayesha's Salon Official — women-owned beauty salon in F-11 Markaz, Islamabad. Rated 4.4★ on Google (556 reviews). Book on WhatsApp +92 334 3777040.",
+    "Dejas Beauty Saloon — beauty salon in I-10 Markaz, Islamabad. Rated 4.4★ on Google (97 reviews). Book on WhatsApp +92 333 5321321.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

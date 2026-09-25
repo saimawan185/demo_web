@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <p className="font-display text-2xl text-amber-300 italic">Ayesha&apos;s</p>
-            <p className="eyebrow text-ink-500 mt-1 mb-4">Salon Official · F-11</p>
+            <p className="font-display text-2xl text-amber-300 italic">Dejas</p>
+            <p className="eyebrow text-ink-500 mt-1 mb-4">Beauty Saloon · I-10</p>
             <p className="text-sm leading-relaxed">
-              Women-owned beauty salon in F-11 Markaz, Islamabad — bridal, party makeup, hair and spa.
+              Beauty salon in I-10 Markaz, Islamabad — party makeup, hair colour, nails and spa care.
             </p>
           </div>
           <div>
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] tracking-wide text-ink-600">
-          <p>&copy; {new Date().getFullYear()} Ayesha&apos;s Salon Official. Demo website.</p>
+          <p>&copy; {new Date().getFullYear()} Dejas Beauty Saloon. Demo website.</p>
           <p>Indicative prices — confirm when booking.</p>
         </div>
       </div>

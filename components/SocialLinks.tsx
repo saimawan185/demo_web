@@ -9,9 +9,9 @@ export const socialPlatforms: {
   hint: string;
 }[] = [
   { key: "whatsapp", name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
-  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "@ayeshasbeautysalon01" },
-  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Ayesha's Salon Official" },
-  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "@ayeshassalonofficial" },
+  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "@dejasbeautysaloon" },
+  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Dejas Beauty Saloon" },
+  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "@dejas_saloon" },
   { key: "google", name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 

@@ -3,7 +3,7 @@ import { services, packages, formatPrice, salon, asset } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services & Prices",
-  description: "Ayesha's Salon Official services and indicative prices in F-11 Markaz, Islamabad.",
+  description: "Dejas Beauty Saloon services and indicative prices in I-10 Markaz, Islamabad.",
 };
 
 export default function ServicesPage() {

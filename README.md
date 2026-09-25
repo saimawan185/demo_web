@@ -1,6 +1,6 @@
-# Ayesha's Salon Official — Demo Website
+# Dejas Beauty Saloon — Demo Website
 
-Premium demo site for **Ayesha's Salon Official** (women-owned beauty salon in F-11 Markaz, Islamabad) — rated highly on Google with no dedicated website (Instagram listed as their only “website”).
+Premium demo site for **Dejas Beauty Saloon** (beauty salon in I-10 Markaz, Islamabad) — rated on Google with no dedicated website (TikTok listed as their only “website”).
 
 ## Live
 
@@ -10,10 +10,11 @@ Premium demo site for **Ayesha's Salon Official** (women-owned beauty salon in F
 
 | | |
 |--|--|
-| **Name** | Ayesha's Salon Official |
-| **Address** | 1 Select, Meher Ali Road, Street 1, near Sindh Bank, F-11 Markaz, Islamabad |
-| **Phone / WhatsApp** | +92 334 3777040 (`+923343777040`) |
-| **Google rating** | 4.4★ (556 reviews) |
+| **Name** | Dejas Beauty Saloon |
+| **Address** | Basement #10, Pervaiz Plaza, near Kashmir General Store, I-10 Markaz, Islamabad |
+| **Phone / WhatsApp** | +92 333 5321321 (`+923335321321`) |
+| **Landline** | +92 51 4441441 |
+| **Google rating** | 4.4★ (97 reviews) |
 | **Hours** | Daily 11:00 AM – 8:00 PM |
 | **Social** | WhatsApp, Instagram, Facebook, TikTok, Google Reviews |
 

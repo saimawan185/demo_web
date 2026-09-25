@@ -15,7 +15,7 @@ function Stars({ rating }: { rating: number }) {
 }
 
 const highlights = [
-  { label: "Location", value: "F-11 Markaz" },
+  { label: "Location", value: "I-10 Markaz" },
   { label: "Google", value: `${salon.rating}★` },
   { label: "Reviews", value: `${salon.reviewCount}+` },
   { label: "Booking", value: "WhatsApp" },
@@ -28,24 +28,24 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88svh] md:min-h-[92vh] flex flex-col overflow-hidden bg-ink-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={heroImage} alt="Ayesha's Salon Official" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
+        <img src={heroImage} alt="Dejas Beauty Saloon" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/78 to-ink-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/45" />
 
         <div className="relative flex-1 flex items-end md:items-center">
           <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-10 md:pt-32 md:pb-16">
             <p className="font-display text-[3.2rem] sm:text-6xl md:text-7xl leading-[0.95] text-amber-300 italic animate-rise">
-              Ayesha&apos;s
+              Dejas
             </p>
             <div className="mt-3 flex items-center gap-3 animate-rise delay-1">
               <span className="h-px w-8 bg-amber-400" />
-              <p className="eyebrow text-amber-400">Salon Official · F-11 Markaz Islamabad</p>
+              <p className="eyebrow text-amber-400">Beauty Saloon · I-10 Markaz Islamabad</p>
             </div>
             <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl text-ink-50 font-normal leading-snug max-w-xl animate-rise delay-2">
-              Bridal & party glam in the heart of F-11
+              Party glam, hair colour & beauty care in I-10
             </h1>
             <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
-              Women-owned beauty salon — book on WhatsApp at {salon.phoneDisplay}.
+              Trusted local salon — book on WhatsApp at {salon.phoneDisplay}.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
               <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -76,7 +76,7 @@ export default function HomePage() {
               <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Makeup, hair & spa care</h2>
             </div>
             <p className="text-ink-600 text-sm md:text-base max-w-sm leading-relaxed">
-              From bridal and Shalima looks to everyday beauty — hair, makeup, nails and wellness.
+              From party makeup and highlights to manicures, pedicures and everyday beauty.
             </p>
           </div>
 
@@ -110,22 +110,22 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/bridal.jpg")} alt="Bridal glam at Ayesha's" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <img src={asset("/images/party.jpg")} alt="Party glam at Dejas" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-4 border border-amber-400/30 pointer-events-none" />
           </div>
           <div data-reveal="right">
-            <p className="eyebrow text-amber-400 mb-4">Why Ayesha&apos;s</p>
+            <p className="eyebrow text-amber-400 mb-4">Why Dejas</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink-50 leading-tight">
-              Women-owned salon in F-11 Markaz
+              Local beauty salon in I-10 Markaz
             </h2>
             <div className="accent-rule w-16 my-6" />
             <p className="text-ink-300 leading-relaxed">
-              Ayesha&apos;s Salon Official sits near Sindh Bank in F-11 Markaz — known for bridal, Walima and party makeup. Clients rate it {salon.rating}★ on Google across {salon.reviewCount} reviews, yet the salon had no dedicated website until now (only Instagram & socials).
+              Dejas Beauty Saloon is in Pervaiz Plaza near Kashmir General Store, I-10 Markaz — rated {salon.rating}★ on Google across {salon.reviewCount} reviews. Clients praise party makeup, hair colour, manicures and a cooperative team led by Ma&apos;am Uzma. Until now the salon had no dedicated website (only TikTok & socials).
             </p>
             <p className="mt-4 text-ink-400 leading-relaxed text-sm">
               Message on WhatsApp <strong className="text-amber-300">{salon.phoneDisplay}</strong> to book.
             </p>
-            <Link href="/about/" className="btn-primary mt-8">About Ayesha&apos;s</Link>
+            <Link href="/about/" className="btn-primary mt-8">About Dejas</Link>
           </div>
         </div>
       </section>
@@ -162,9 +162,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div data-reveal="left">
             <p className="eyebrow text-amber-600 mb-3">Visit</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in F-11 Markaz</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in I-10 Markaz</h2>
             <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
-              Near Sindh Bank on Meher Ali Road — book ahead for bridal trials, party glam and everyday beauty.
+              Basement #10, Pervaiz Plaza — near Kashmir General Store. Book ahead for party glam, colour and beauty services.
             </p>
           </div>
           <div className="border border-ink-300/80 bg-white p-7 md:p-8" data-reveal="right">
@@ -188,7 +188,7 @@ export default function HomePage() {
             <p className="eyebrow text-amber-600 mb-3">Google Reviews</p>
             <h2 className="font-display text-4xl text-ink-950">{salon.rating}★ from {salon.reviewCount} clients</h2>
             <div className="accent-rule w-20 mx-auto mt-5" />
-            <p className="mt-3 text-xs text-ink-500">Selected from public Google Maps reviews for Ayesha&apos;s Salon Official.</p>
+            <p className="mt-3 text-xs text-ink-500">Selected from public Google Maps reviews for Dejas Beauty Saloon.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {reviews.map((review, i) => (
@@ -215,13 +215,13 @@ export default function HomePage() {
       </section>
 
       <section className="py-20 md:py-24 bg-ink-950 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/party.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/hair.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-ink-950/85" />
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
-          <p className="eyebrow text-amber-400 mb-4">Book Ayesha&apos;s</p>
+          <p className="eyebrow text-amber-400 mb-4">Book Dejas</p>
           <h2 className="font-display text-3xl md:text-5xl text-ink-50">Ready for your next appointment?</h2>
           <p className="mt-4 text-ink-300 text-sm md:text-base">
-            WhatsApp Ayesha&apos;s Salon Official in F-11 to reserve your time.
+            WhatsApp Dejas Beauty Saloon in I-10 to reserve your time.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">

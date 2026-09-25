@@ -5,7 +5,7 @@ import { salon, hours } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact Ayesha's Salon Official in F-11 Markaz, Islamabad. WhatsApp +92 334 3777040.",
+  description: "Contact Dejas Beauty Saloon in I-10 Markaz, Islamabad. WhatsApp +92 333 5321321.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
           <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">Contact</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto animate-rise delay-2">
-            WhatsApp, call or visit us in F-11 Markaz.
+            WhatsApp, call or visit us in I-10 Markaz.
           </p>
         </div>
       </section>
@@ -34,6 +34,14 @@ export default function ContactPage() {
                     {salon.phoneDisplay}
                   </a>
                 </div>
+                {salon.landlineDisplay && (
+                  <div>
+                    <p className="eyebrow text-ink-500 mb-1">Landline</p>
+                    <a href={`tel:${salon.landline}`} className="font-medium hover:text-amber-600 transition-colors">
+                      {salon.landlineDisplay}
+                    </a>
+                  </div>
+                )}
                 <div>
                   <p className="eyebrow text-ink-500 mb-1">Address</p>
                   <p className="leading-relaxed text-sm">{salon.address.full}</p>
@@ -71,7 +79,7 @@ export default function ContactPage() {
 
           <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal>
             <iframe
-              title="Ayesha's Salon Official location"
+              title="Dejas Beauty Saloon location"
               src={salon.mapsEmbed}
               width="100%"
               height="100%"
