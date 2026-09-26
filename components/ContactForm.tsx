@@ -37,7 +37,7 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="phone" className="eyebrow text-ink-500 mb-2 block">Phone Number</label>
-        <input id="phone" name="phone" type="tel" required className={field} placeholder="03XX-XXXXXXX" />
+        <input id="phone" name="phone" type="tel" required className={field} placeholder="+49 ..." />
       </div>
       <div>
         <label htmlFor="service" className="eyebrow text-ink-500 mb-2 block">Service</label>

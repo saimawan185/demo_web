@@ -3,7 +3,7 @@ import { services, packages, formatPrice, salon, asset } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services & Prices",
-  description: "Dejas Beauty Saloon services and indicative prices in I-10 Markaz, Islamabad.",
+  description: "Almaha Beauty Salon services and indicative prices in Kreuzberg, Berlin.",
 };
 
 export default function ServicesPage() {
@@ -18,7 +18,7 @@ export default function ServicesPage() {
           <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">Services & Prices</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto text-sm md:text-base animate-rise delay-2">
-            Demo pricing for planning — confirm final rates when you book.
+            Demo pricing in euros for planning — confirm final rates when you book.
           </p>
         </div>
       </section>

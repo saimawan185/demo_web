@@ -1,6 +1,6 @@
-# Dejas Beauty Saloon — Demo Website
+# AlmaHA Beauty Salon — Demo Website
 
-Premium demo site for **Dejas Beauty Saloon** (beauty salon in I-10 Markaz, Islamabad) — rated on Google with no dedicated website (TikTok listed as their only “website”).
+Premium demo site for **Almaha Beauty Salon** (ladies-only beauty salon in Kreuzberg, Berlin) — rated 4.9★ on Google with **no dedicated website** (Google Maps still shows “Add website”). Bookings via WhatsApp.
 
 ## Live
 
@@ -10,13 +10,12 @@ Premium demo site for **Dejas Beauty Saloon** (beauty salon in I-10 Markaz, Isla
 
 | | |
 |--|--|
-| **Name** | Dejas Beauty Saloon |
-| **Address** | Basement #10, Pervaiz Plaza, near Kashmir General Store, I-10 Markaz, Islamabad |
-| **Phone / WhatsApp** | +92 333 5321321 (`+923335321321`) |
-| **Landline** | +92 51 4441441 |
-| **Google rating** | 4.4★ (97 reviews) |
-| **Hours** | Daily 11:00 AM – 8:00 PM |
-| **Social** | WhatsApp, Instagram, Facebook, TikTok, Google Reviews |
+| **Name** | AlmaHA Beauty Salon |
+| **Address** | Graefestraße 30, 10967 Berlin, Germany |
+| **Phone / WhatsApp** | +49 176 45292648 (`+4917645292648`) |
+| **Google rating** | 4.9★ (102 reviews) |
+| **Hours** | Tue–Sat 10:30 AM – 6:30 PM · Mon & Sun closed |
+| **Social** | WhatsApp, Instagram (@al_maha_beauty_salon), Facebook, TikTok, Google Reviews |
 
 Includes a floating WhatsApp button on every page.
 

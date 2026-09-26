@@ -9,9 +9,9 @@ export const socialPlatforms: {
   hint: string;
 }[] = [
   { key: "whatsapp", name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
-  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "@dejasbeautysaloon" },
-  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Dejas Beauty Saloon" },
-  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "@dejas_saloon" },
+  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "@al_maha_beauty_salon" },
+  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Almaha Beauty Salon" },
+  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "Find AlmaHA Berlin" },
   { key: "google", name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 
