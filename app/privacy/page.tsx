@@ -5,7 +5,7 @@ import SocialLinks from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the AlmaHA Beauty Salon demo website.",
+  description: "Privacy Policy for the Lavanya BeautyParlour demo website.",
 };
 
 export default function PrivacyPage() {
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <p className="eyebrow text-amber-400 mb-4 animate-rise">Legal</p>
           <h1 className="font-display text-4xl md:text-5xl text-ink-50 animate-rise delay-1">Privacy Policy</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
-          <p className="mt-6 text-ink-400 text-sm animate-rise delay-2">Last updated: September 26, 2026</p>
+          <p className="mt-6 text-ink-400 text-sm animate-rise delay-2">Last updated: September 28, 2026</p>
           <p className="mt-4 text-ink-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed animate-rise delay-2">
             How the demo website for {salon.name} may handle information you choose to share.
           </p>
@@ -28,10 +28,10 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">1. Introduction</h2>
             <p>
-              This Privacy Policy explains how the demo website for <strong>{salon.name}</strong> (Berlin, Germany) may collect, use and store information. The site is a demonstration project. Some features — including the on-page contact form — do not send data to a live salon booking system.
+              This Privacy Policy explains how the demo website for <strong>{salon.name}</strong> (Haridwar, India) may collect, use and store information. The site is a demonstration project. Some features — including the on-page contact form — do not send data to a live salon booking system.
             </p>
             <p className="mt-4">
-              Real appointments should be arranged through WhatsApp, phone or the salon&apos;s official social accounts. By using this website you acknowledge that it is provided for demonstration and marketing preview purposes.
+              Real appointments should be arranged through WhatsApp, phone or the parlour&apos;s official social accounts. By using this website you acknowledge that it is provided for demonstration and marketing preview purposes.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">4. Cookies and hosting</h2>
             <p>
-              The static site may be hosted on GitHub Pages or a similar host. Standard hosting logs and browser cookies required for basic site operation may apply. If third-party embeds are used (for example Google Maps), those providers may process technical data under their own policies. Where applicable, we aim to respect GDPR expectations for this demo.
+              The static site may be hosted on GitHub Pages or a similar host. Standard hosting logs and browser cookies required for basic site operation may apply. If third-party embeds are used (for example Google Maps), those providers may process technical data under their own policies.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">7. Your choices</h2>
             <ul className="list-disc pl-6 space-y-3">
-              <li>Contact the salon to update or remove details you previously shared for bookings</li>
+              <li>Contact the parlour to update or remove details you previously shared for bookings</li>
               <li>Stop messaging on WhatsApp at any time</li>
               <li>Adjust cookie and tracking settings in your browser</li>
               <li>Avoid using the demo form and book directly via phone or WhatsApp instead</li>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
           <div className="border border-ink-200 bg-white p-8 md:p-10" data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">10. Contact</h2>
             <p className="mb-6">
-              Questions about this Privacy Policy or your information can be directed to the salon using the details below.
+              Questions about this Privacy Policy or your information can be directed to the parlour using the details below.
             </p>
             <ul className="space-y-2 text-ink-800">
               <li><strong>{salon.name}</strong></li>

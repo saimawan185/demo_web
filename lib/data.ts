@@ -7,152 +7,150 @@ export function asset(path: string): string {
 }
 
 export const salon = {
-  name: "Almaha Beauty Salon",
-  shortName: "Almaha",
-  tagline: "Ladies Beauty Salon · Berlin Kreuzberg",
-  phone: "+4917645292648",
-  phoneDisplay: "+49 176 45292648",
-  email: "hello@almahabbeauty.de",
-  rating: 4.9,
-  reviewCount: 102,
+  name: "Lavanya BeautyParlour",
+  shortName: "Lavanya",
+  tagline: "Ladies Beauty Parlour · Motichur, Haridwar",
+  phone: "+919410934055",
+  phoneDisplay: "+91 94109 34055",
+  email: "hello@lavanyabeautyharidwar.com",
+  rating: 4.7,
+  reviewCount: 225,
   ladiesOnly: true,
   address: {
-    street: "Graefestraße 30",
-    area: "Kreuzberg",
-    city: "Berlin",
-    postal: "10967",
-    country: "Germany",
-    full: "Graefestraße 30, 10967 Berlin, Germany",
+    street: "Gayatri Vihar, opp. Shanti Kunj",
+    area: "Motichur",
+    city: "Haridwar",
+    postal: "249410",
+    country: "India",
+    full: "Gayatri Vihar, opp. Shanti Kunj, Motichur, Haridwar, Uttarakhand 249410, India",
   },
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=ALMAHA+BEAUTY+SALON+Graefestra%C3%9Fe+30+Berlin",
+    "https://www.google.com/maps/search/?api=1&query=Lavanya+BeautyParlour+Ladies+only+Motichur+Haridwar",
   mapsEmbed:
-    "https://www.google.com/maps?q=ALMAHA+BEAUTY+SALON+Graefestra%C3%9Fe+30+Berlin&output=embed",
+    "https://www.google.com/maps?q=Lavanya+BeautyParlour(Ladies+only)+Motichur+Haridwar&output=embed",
   googleReviewsUrl:
-    "https://www.google.com/maps/search/?api=1&query=ALMAHA+BEAUTY+SALON+Graefestra%C3%9Fe+30+Berlin",
+    "https://www.google.com/maps/search/?api=1&query=Lavanya+BeautyParlour+Ladies+only+Motichur+Haridwar",
   social: {
-    facebook: "https://www.facebook.com/search/top?q=Almaha%20Beauty%20Salon%20Berlin",
-    instagram: "https://www.instagram.com/al_maha_beauty_salon/",
-    tiktok: "https://www.tiktok.com/search?q=Almaha%20Beauty%20Salon%20Berlin",
-    whatsapp: "https://wa.me/4917645292648",
+    facebook: "https://www.facebook.com/search/top?q=Lavanya%20BeautyParlour%20Haridwar",
+    instagram: "https://www.instagram.com/explore/search/keyword/?q=Lavanya%20BeautyParlour%20Haridwar",
+    tiktok: "https://www.tiktok.com/search?q=Lavanya%20BeautyParlour%20Haridwar",
+    whatsapp: "https://wa.me/919410934055",
   },
 };
 
-/** Based on Google Maps / Treatwell listings */
+/** Based on Google Maps listing */
 export const hours = [
-  { day: "Monday", hours: "Closed" },
-  { day: "Tuesday – Saturday", hours: "10:30 AM – 6:30 PM" },
-  { day: "Sunday", hours: "Closed" },
+  { day: "Monday – Sunday", hours: "7:00 AM – 7:00 PM" },
 ];
 
 export const heroImage = asset("/images/hero.jpg");
 
 export const services = [
   {
-    id: "haircut",
-    name: "Ladies Haircut",
-    description: "Wash, cut and style tailored to your face shape and hair texture.",
-    priceFrom: 30,
-    duration: "25–60 min",
-    image: asset("/images/hair.jpg"),
-  },
-  {
-    id: "color",
-    name: "Colour & Highlights",
-    description: "Root touch-ups, full colour and modern colour work with professional care.",
-    priceFrom: 100,
-    duration: "90–180 min",
-    image: asset("/images/keratin.jpg"),
-  },
-  {
-    id: "keratin",
-    name: "Keratin Treatment",
-    description: "Smoothing Brazilian keratin for softer, manageable hair.",
-    priceFrom: 250,
-    duration: "2–3 hrs",
-    image: asset("/images/spa.jpg"),
-  },
-  {
     id: "bridal",
-    name: "Bridal Hairstyle",
-    description: "Wedding-day updos and soft glam styles for your special occasion.",
-    priceFrom: 200,
-    duration: "90–120 min",
+    name: "Bridal Makeup",
+    description: "Wedding-day makeup and styling for brides — a specialty guests often mention.",
+    priceFrom: 2500,
+    duration: "90–150 min",
     image: asset("/images/bridal.jpg"),
   },
   {
     id: "party-makeup",
-    name: "Styling & Blow-dry",
-    description: "Event-ready blow-dries, straightening and polished finishing.",
-    priceFrom: 55,
-    duration: "45–75 min",
+    name: "Party Makeup",
+    description: "Event-ready makeup with soft or glam looks for parties and celebrations.",
+    priceFrom: 800,
+    duration: "45–90 min",
     image: asset("/images/party.jpg"),
   },
   {
+    id: "hairstyle",
+    name: "Hairstyling",
+    description: "Blow-dry, updos and polished styles — frequently praised on Google reviews.",
+    priceFrom: 300,
+    duration: "30–75 min",
+    image: asset("/images/hair.jpg"),
+  },
+  {
+    id: "haircut",
+    name: "Ladies Haircut",
+    description: "Wash, cut and finish tailored to your face shape and hair texture.",
+    priceFrom: 200,
+    duration: "30–60 min",
+    image: asset("/images/keratin.jpg"),
+  },
+  {
     id: "brows",
-    name: "Brows & Lashes",
-    description: "Threading, tinting and lash care for clean, defined eyes.",
-    priceFrom: 10,
-    duration: "15–45 min",
+    name: "Eyebrow Threading",
+    description: "Smooth, precise threading with soft technique guests trust for shaping.",
+    priceFrom: 50,
+    duration: "10–20 min",
     image: asset("/images/spa.jpg"),
   },
   {
     id: "waxing",
-    name: "Waxing & Threading",
-    description: "Face and body hair removal with gentle, precise technique.",
-    priceFrom: 5,
-    duration: "10–45 min",
+    name: "Waxing",
+    description: "Face and body waxing with gentle care for a clean finish.",
+    priceFrom: 100,
+    duration: "15–45 min",
     image: asset("/images/waxing.jpg"),
   },
   {
-    id: "pmu",
-    name: "Permanent Make-up",
-    description: "Brows and pigment work for lasting definition — consult on WhatsApp.",
-    priceFrom: 200,
-    duration: "Consultation",
+    id: "facial",
+    name: "Facials & Skin Care",
+    description: "Refreshing facials and skin care for a healthy, glowing look.",
+    priceFrom: 400,
+    duration: "45–75 min",
+    image: asset("/images/spa.jpg"),
+  },
+  {
+    id: "manicure",
+    name: "Manicure & Pedicure",
+    description: "Nail care and tidy finishes for hands and feet.",
+    priceFrom: 250,
+    duration: "30–60 min",
     image: asset("/images/manicure.jpg"),
   },
   {
-    id: "care",
-    name: "Hair Treatments",
-    description: "Nourishing cures and care rituals for healthier-feeling hair.",
-    priceFrom: 50,
-    duration: "30–60 min",
+    id: "spa",
+    name: "Spa & Massage",
+    description: "Relaxing head, foot and body massage options for a calm break.",
+    priceFrom: 500,
+    duration: "30–90 min",
     image: asset("/images/pedicure.jpg"),
   },
 ];
 
 export const packages = [
-  { name: "Cut & Style", price: 60, desc: "Wash, cut and blow-dry" },
-  { name: "Colour Refresh", price: 130, desc: "Root colour + styling" },
-  { name: "Bridal Soft Glow", price: 220, desc: "Bridal hairstyle trial-ready finish" },
+  { name: "Bridal Soft Glow", price: 3500, desc: "Bridal makeup + hairstyle" },
+  { name: "Party Ready", price: 1200, desc: "Party makeup + styling" },
+  { name: "Threading Duo", price: 150, desc: "Eyebrows + upper lip" },
 ];
 
-/** Adapted from public Google Maps reviews for AlmaHA Beauty Salon */
+/** Adapted from public Google Maps reviews for Lavanya BeautyParlour */
 export const reviews = [
   {
-    name: "Yasser Alotaibi",
+    name: "Babita",
     rating: 5,
-    text: "This salon is only for ladies — good atmosphere and professional service. Prices are logical and acceptable.",
+    text: "It was a very warm experience… I'm satisfied. The lady is welcoming — make sure to wash your hair before going for hair services.",
     time: "Google review",
     source: "Google",
   },
   {
-    name: "Lea Simon",
+    name: "Supriya Ladekar",
     rating: 5,
-    text: "I needed a spontaneous haircut and could just drop in. She cut my hair exactly how I wanted and everyone was super friendly.",
+    text: "When we visited Rishikesh we visited Lavanya Beauty Parlour as well. She is good at styling hair. Thank you so much — one happy customer.",
     time: "Google review",
     source: "Google",
   },
   {
-    name: "Ray San",
+    name: "Ishika Jangalwa",
     rating: 5,
-    text: "A super friendly little salon! Short-notice appointment, butterfly layers with bangs — the result is beautiful and the hairdresser was incredibly nice.",
+    text: "It's hard to trust a random parlour in another state, but the beautician really won my trust with smooth threading, soft hands and a friendly personality. Fine work — you must visit Lavanya in Haridwar.",
     time: "Google review",
     source: "Google",
   },
 ];
 
 export function formatPrice(amount: number): string {
-  return `€${amount.toLocaleString("de-DE")}`;
+  return `₹${amount.toLocaleString("en-IN")}`;
 }

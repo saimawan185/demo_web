@@ -9,11 +9,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Ladies Beauty Salon in Kreuzberg, Berlin`,
+    default: `${salon.name} | Ladies Beauty Parlour in Motichur, Haridwar`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Almaha Beauty Salon — ladies-only beauty salon in Kreuzberg, Berlin. Rated 4.9★ on Google (102 reviews). Book on WhatsApp +49 176 45292648.",
+    "Lavanya BeautyParlour — ladies-only beauty parlour in Motichur, Haridwar. Rated 4.7★ on Google (225 reviews). Book on WhatsApp +91 94109 34055.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

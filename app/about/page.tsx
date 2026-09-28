@@ -5,21 +5,21 @@ import SocialLinks from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "About AlmaHA Beauty Salon — ladies-only beauty salon in Kreuzberg, Berlin.",
+  description: "About Lavanya BeautyParlour — ladies-only beauty parlour in Motichur, Haridwar.",
 };
 
 const values = [
   {
     title: "Ladies only",
-    text: "A comfortable space just for women — guests on Google often mention the calm atmosphere and professional care.",
+    text: "A welcoming space just for women — guests on Google often mention the warm atmosphere and professional care.",
   },
   {
-    title: "Precise cuts & colour",
-    text: "From spontaneous walk-in cuts to colour and butterfly layers — stylists listen closely and deliver what you asked for.",
+    title: "Bridal & party makeup",
+    text: "Specialised in bridal makeup with careful hairstyling — visitors praise soft hands and fine, trusted work.",
   },
   {
-    title: "Trusted in Kreuzberg",
-    text: `Rated ${salon.rating}★ from ${salon.reviewCount} Google reviews — short-notice bookings and friendly welcome are frequently praised.`,
+    title: "Trusted in Motichur",
+    text: `Rated ${salon.rating}★ from ${salon.reviewCount} Google reviews — threading, hair and friendly service are frequently praised.`,
   },
 ];
 
@@ -27,7 +27,7 @@ const milestones = [
   { label: "Google rating", value: `${salon.rating}★` },
   { label: "Public reviews", value: `${salon.reviewCount}+` },
   { label: "Focus", value: "Ladies only" },
-  { label: "District", value: "Kreuzberg" },
+  { label: "Area", value: "Motichur" },
 ];
 
 export default function AboutPage() {
@@ -36,10 +36,10 @@ export default function AboutPage() {
       <section className="bg-ink-950 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <p className="eyebrow text-amber-400 mb-4 animate-rise">Our Story</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About AlmaHA</h1>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About Lavanya</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto leading-relaxed animate-rise delay-2">
-            Ladies-only beauty salon in Kreuzberg, Berlin — hair, colour and beauty care.
+            Ladies-only beauty parlour in Motichur, Haridwar — bridal makeup, hair and beauty care.
           </p>
         </div>
       </section>
@@ -48,17 +48,17 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative aspect-[4/5] overflow-hidden bg-ink-200" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/party.jpg")} alt="Styling at AlmaHA Beauty Salon" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={asset("/images/party.jpg")} alt="Styling at Lavanya BeautyParlour" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-4 border border-amber-400/35 pointer-events-none" />
           </div>
           <div className="space-y-5 text-ink-700 leading-relaxed" data-reveal="right">
             <p className="eyebrow text-amber-600">Who we are</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">A neighbourhood salon on Graefestraße</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">A neighbourhood parlour near Shanti Kunj</h2>
             <p>
-              <strong className="text-ink-950">{salon.name}</strong> is at Graefestraße 30 in Berlin-Kreuzberg. It is a ladies-only salon known for haircuts, colour, keratin, bridal styling, brows and waxing.
+              <strong className="text-ink-950">{salon.name}</strong> is at Gayatri Vihar, opposite Shanti Kunj in Motichur, Haridwar. It is a ladies-only parlour known for bridal makeup, hairstyling, threading, waxing and skin care.
             </p>
             <p>
-              Guests discover AlmaHA on Google Maps and Instagram (@al_maha_beauty_salon). The listing still invites owners to “Add website” — until now bookings mainly ran through WhatsApp, phone and Treatwell.
+              Guests discover Lavanya on Google Maps. The listing still invites owners to “Add website” — until now bookings mainly ran through WhatsApp and phone.
             </p>
             <p>
               Message <strong className="text-ink-950">{salon.phoneDisplay}</strong> on WhatsApp to reserve your appointment.
@@ -106,11 +106,11 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl text-ink-950 mb-6">What we offer</h2>
             <ul className="space-y-4">
               {[
-                "Ladies haircuts & blow-dry",
-                "Colour, highlights & keratin",
-                "Bridal hairstyles",
-                "Brows, lashes & threading",
-                "Waxing & permanent make-up",
+                "Bridal & party makeup",
+                "Hairstyling & ladies haircuts",
+                "Eyebrow threading & shaping",
+                "Waxing & skin care",
+                "Manicure, pedicure & spa",
                 "Ladies-only private setting",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-ink-700 text-sm border-b border-ink-200 pb-3 last:border-0">
@@ -122,7 +122,7 @@ export default function AboutPage() {
           </div>
           <div className="border border-ink-200 bg-white p-8 md:p-10" data-reveal="right">
             <p className="eyebrow text-amber-600 mb-3">Visit</p>
-            <h3 className="font-display text-2xl md:text-3xl text-ink-950">Find us in Kreuzberg</h3>
+            <h3 className="font-display text-2xl md:text-3xl text-ink-950">Find us in Motichur</h3>
             <p className="mt-4 text-ink-600 text-sm leading-relaxed">{salon.address.full}</p>
             <div className="mt-6 space-y-3 text-sm">
               {hours.map((item) => (
@@ -147,7 +147,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
           <h2 className="font-display text-3xl md:text-4xl text-ink-950">Ready to book?</h2>
           <p className="mt-4 text-ink-600 text-sm md:text-base">
-            Message AlmaHA on WhatsApp for cuts, colour or beauty appointments.
+            Message Lavanya on WhatsApp for bridal, hair or beauty appointments.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/services/" className="btn-dark">Services & Prices</Link>
