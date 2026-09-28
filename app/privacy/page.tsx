@@ -5,7 +5,7 @@ import SocialLinks from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Lavanya BeautyParlour demo website.",
+  description: "Privacy Policy for the Beauty Aura Salon demo website.",
 };
 
 export default function PrivacyPage() {
@@ -28,10 +28,10 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">1. Introduction</h2>
             <p>
-              This Privacy Policy explains how the demo website for <strong>{salon.name}</strong> (Haridwar, India) may collect, use and store information. The site is a demonstration project. Some features — including the on-page contact form — do not send data to a live salon booking system.
+              This Privacy Policy explains how the demo website for <strong>{salon.name}</strong> (Lahore, Pakistan) may collect, use and store information. The site is a demonstration project. Some features — including the on-page contact form — do not send data to a live salon booking system.
             </p>
             <p className="mt-4">
-              Real appointments should be arranged through WhatsApp, phone or the parlour&apos;s official social accounts. By using this website you acknowledge that it is provided for demonstration and marketing preview purposes.
+              Real appointments should be arranged through WhatsApp, phone or the salon&apos;s official social accounts. By using this website you acknowledge that it is provided for demonstration and marketing preview purposes.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
           <div data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">7. Your choices</h2>
             <ul className="list-disc pl-6 space-y-3">
-              <li>Contact the parlour to update or remove details you previously shared for bookings</li>
+              <li>Contact the salon to update or remove details you previously shared for bookings</li>
               <li>Stop messaging on WhatsApp at any time</li>
               <li>Adjust cookie and tracking settings in your browser</li>
               <li>Avoid using the demo form and book directly via phone or WhatsApp instead</li>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
           <div className="border border-ink-200 bg-white p-8 md:p-10" data-reveal>
             <h2 className="font-display text-2xl md:text-3xl text-ink-950 mb-4">10. Contact</h2>
             <p className="mb-6">
-              Questions about this Privacy Policy or your information can be directed to the parlour using the details below.
+              Questions about this Privacy Policy or your information can be directed to the salon using the details below.
             </p>
             <ul className="space-y-2 text-ink-800">
               <li><strong>{salon.name}</strong></li>

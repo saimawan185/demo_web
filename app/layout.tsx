@@ -9,11 +9,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Ladies Beauty Parlour in Motichur, Haridwar`,
+    default: `${salon.name} | Laser & Nail Hub in DHA Phase 4, Lahore`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Lavanya BeautyParlour — ladies-only beauty parlour in Motichur, Haridwar. Rated 4.7★ on Google (225 reviews). Book on WhatsApp +91 94109 34055.",
+    "Beauty Aura Salon Laser & Nail Hub — beauty salon in DHA Phase 4, Lahore. Rated 4.8★ on Google (46 reviews). Book on WhatsApp +92 300 4776011.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

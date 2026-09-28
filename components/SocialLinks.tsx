@@ -9,9 +9,9 @@ export const socialPlatforms: {
   hint: string;
 }[] = [
   { key: "whatsapp", name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
-  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "Find Lavanya Haridwar" },
-  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Lavanya BeautyParlour" },
-  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "Search Lavanya Haridwar" },
+  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "Find Beauty Aura Lahore" },
+  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Beauty Aura Salon" },
+  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "Search Beauty Aura Lahore" },
   { key: "google", name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 
