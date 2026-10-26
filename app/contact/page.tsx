@@ -5,7 +5,7 @@ import { salon, hours } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact Beauty Aura Salon in DHA Phase 4, Lahore. WhatsApp +92 300 4776011.",
+  description: "Contact Maria's Beauty Parlour in Gulshan Block 11, Karachi. WhatsApp +92 334 8592187.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
           <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">Contact</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto animate-rise delay-2">
-            WhatsApp, call or visit us in DHA Phase 4.
+            WhatsApp us, call, or drop by Gulshan Block 11.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function ContactPage() {
 
           <div className="mt-16 overflow-hidden border border-ink-200 h-80 md:h-96" data-reveal>
             <iframe
-              title="Beauty Aura Salon location"
+              title="Maria's Beauty Parlour location"
               src={salon.mapsEmbed}
               width="100%"
               height="100%"

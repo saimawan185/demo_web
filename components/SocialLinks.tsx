@@ -8,10 +8,10 @@ export const socialPlatforms: {
   href: string;
   hint: string;
 }[] = [
-  { key: "whatsapp", name: "WhatsApp", href: salon.social.whatsapp, hint: "Book instantly" },
-  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "Find Beauty Aura Lahore" },
-  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "Beauty Aura Salon" },
-  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "Search Beauty Aura Lahore" },
+  { key: "whatsapp", name: "WhatsApp", href: salon.social.whatsapp, hint: "Book in a tap" },
+  { key: "instagram", name: "Instagram", href: salon.social.instagram, hint: "Find Maria's Gulshan" },
+  { key: "facebook", name: "Facebook", href: salon.social.facebook, hint: "@mariasbeautyparlour" },
+  { key: "tiktok", name: "TikTok", href: salon.social.tiktok, hint: "Search Maria's Karachi" },
   { key: "google", name: "Google", href: salon.googleReviewsUrl, hint: `${salon.rating}★ · ${salon.reviewCount} reviews` },
 ];
 

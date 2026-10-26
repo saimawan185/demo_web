@@ -15,10 +15,10 @@ function Stars({ rating }: { rating: number }) {
 }
 
 const highlights = [
-  { label: "Location", value: "DHA Phase 4" },
+  { label: "Vibe", value: "Gulshan" },
   { label: "Google", value: `${salon.rating}★` },
   { label: "Reviews", value: `${salon.reviewCount}+` },
-  { label: "Booking", value: "WhatsApp" },
+  { label: "Book", value: "WhatsApp" },
 ];
 
 export default function HomePage() {
@@ -28,30 +28,30 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88svh] md:min-h-[92vh] flex flex-col overflow-hidden bg-ink-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={heroImage} alt="Beauty Aura Salon Lahore" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
+        <img src={heroImage} alt="Maria's Beauty Parlour Karachi" className="absolute inset-0 w-full h-full object-cover object-[center_30%] animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/78 to-ink-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/45" />
 
         <div className="relative flex-1 flex items-end md:items-center">
           <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-10 md:pt-32 md:pb-16">
             <p className="font-display text-[3.2rem] sm:text-6xl md:text-7xl leading-[0.95] text-amber-300 italic animate-rise">
-              Beauty Aura
+              Maria&apos;s
             </p>
             <div className="mt-3 flex items-center gap-3 animate-rise delay-1">
               <span className="h-px w-8 bg-amber-400" />
-              <p className="eyebrow text-amber-400">Laser & Nail Hub · DHA Phase 4, Lahore</p>
+              <p className="eyebrow text-amber-400">Hair & Skin Care · Gulshan Block 11</p>
             </div>
             <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl text-ink-50 font-normal leading-snug max-w-xl animate-rise delay-2">
-              Hair, skin, nails & laser care in DHA
+              Fresh cuts, bold colour & glow-up energy
             </h1>
             <p className="mt-4 text-sm md:text-base text-ink-300 max-w-md leading-relaxed animate-rise delay-2">
-              Book on WhatsApp at {salon.phoneDisplay}.
+              Open late in Gulshan — tap WhatsApp {salon.phoneDisplay} and book your slot.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 animate-rise delay-3">
               <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book on WhatsApp
               </a>
-              <Link href="/services/" className="btn-ghost">View Services</Link>
+              <Link href="/services/" className="btn-ghost">See the Menu</Link>
             </div>
           </div>
         </div>
@@ -73,10 +73,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14" data-reveal>
             <div className="max-w-xl">
               <p className="eyebrow text-amber-600 mb-3">Services</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Hair, nails, skin & laser</h2>
+              <h2 className="font-display text-4xl md:text-5xl text-ink-950 leading-tight">Hair, colour, glow & glam</h2>
             </div>
             <p className="text-ink-600 text-sm md:text-base max-w-sm leading-relaxed">
-              From butterfly haircuts to mani-pedi, facials, massage and laser — hygiene-first care in DHA Phase 4.
+              Express cuts, colour that pops, soft facials, bridal glam and tidy mani-pedi — all with friendly energy.
             </p>
           </div>
 
@@ -110,22 +110,22 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/hair.jpg")} alt="Hair styling at Beauty Aura" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <img src={asset("/images/hair.jpg")} alt="Hair styling at Maria's" className="img-zoom absolute inset-0 w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-4 border border-amber-400/30 pointer-events-none" />
           </div>
           <div data-reveal="right">
-            <p className="eyebrow text-amber-400 mb-4">Why Beauty Aura</p>
+            <p className="eyebrow text-amber-400 mb-4">Why Maria&apos;s</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink-50 leading-tight">
-              Trusted salon in DHA Phase 4
+              Gulshan&apos;s go-to glow spot
             </h2>
             <div className="accent-rule w-16 my-6" />
             <p className="text-ink-300 leading-relaxed">
-              Beauty Aura Salon Laser & Nail Hub sits in Sector CCA, DHA Phase 4, Lahore — rated {salon.rating}★ on Google across {salon.reviewCount} reviews. Guests praise cooperative staff, hygiene, haircuts, facials and mani-pedi. Google Maps still shows “Add website” — until now the salon relied on WhatsApp and phone.
+              Maria&apos;s Beauty Parlour sits near Moon Garden in Gulshan Block 11 — rated {salon.rating}★ across {salon.reviewCount} Google reviews. Guests love express haircuts, colour that surprises, soft-glow facials and cooperative staff. No dedicated website yet — bookings run on WhatsApp and Facebook.
             </p>
             <p className="mt-4 text-ink-400 leading-relaxed text-sm">
-              Message on WhatsApp <strong className="text-amber-300">{salon.phoneDisplay}</strong> to book.
+              Message <strong className="text-amber-300">{salon.phoneDisplay}</strong> and lock your time.
             </p>
-            <Link href="/about/" className="btn-primary mt-8">About Beauty Aura</Link>
+            <Link href="/about/" className="btn-primary mt-8">Meet Maria&apos;s</Link>
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10" data-reveal>
             <p className="eyebrow text-amber-600 mb-3">Connect</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">All social platforms</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Stay in the loop</h2>
             <div className="accent-rule w-20 mx-auto mt-5" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4" data-reveal>
@@ -162,9 +162,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div data-reveal="left">
             <p className="eyebrow text-amber-600 mb-3">Visit</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in DHA Phase 4</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">Find us in Gulshan</h2>
             <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
-              Sector CCA commercial area — book ahead for hair, nails, facial and laser appointments.
+              Moon Garden Street, Block 11 — open 10 AM to 10 PM for walk-ins and WhatsApp bookings.
             </p>
           </div>
           <div className="border border-ink-300/80 bg-white p-7 md:p-8" data-reveal="right">
@@ -186,9 +186,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12" data-reveal>
             <p className="eyebrow text-amber-600 mb-3">Google Reviews</p>
-            <h2 className="font-display text-4xl text-ink-950">{salon.rating}★ from {salon.reviewCount} clients</h2>
+            <h2 className="font-display text-4xl text-ink-950">{salon.rating}★ from {salon.reviewCount} happy clients</h2>
             <div className="accent-rule w-20 mx-auto mt-5" />
-            <p className="mt-3 text-xs text-ink-500">Selected from public Google Maps reviews for Beauty Aura Salon.</p>
+            <p className="mt-3 text-xs text-ink-500">Selected from public Google Maps reviews for Maria&apos;s Beauty Parlour.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {reviews.map((review, i) => (
@@ -218,10 +218,10 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-25" style={{ backgroundImage: `url(${asset("/images/bridal.jpg")})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-ink-950/85" />
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
-          <p className="eyebrow text-amber-400 mb-4">Book Beauty Aura</p>
-          <h2 className="font-display text-3xl md:text-5xl text-ink-50">Ready for your next appointment?</h2>
+          <p className="eyebrow text-amber-400 mb-4">Ready when you are</p>
+          <h2 className="font-display text-3xl md:text-5xl text-ink-50">Your next glow-up starts on WhatsApp</h2>
           <p className="mt-4 text-ink-300 text-sm md:text-base">
-            WhatsApp Beauty Aura in DHA Phase 4 to reserve your time.
+            Message Maria&apos;s in Gulshan and grab your appointment today.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a href={salon.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">

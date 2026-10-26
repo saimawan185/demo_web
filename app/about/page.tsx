@@ -5,29 +5,29 @@ import SocialLinks from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "About Beauty Aura Salon — laser & nail hub in DHA Phase 4, Lahore.",
+  description: "About Maria's Beauty Parlour — energetic hair & skin care in Gulshan Block 11, Karachi.",
 };
 
 const values = [
   {
-    title: "Hygiene first",
-    text: "Guests on Google often mention clean atmosphere and hygiene-conscious care across hair, nails and skin services.",
+    title: "Express energy",
+    text: "Need a quick cut or urgent makeup? Guests praise fast, outstanding service that still feels personal.",
   },
   {
-    title: "Cooperative staff",
-    text: "From butterfly haircuts to facials and mani-pedi — stylists listen carefully and deliver what you asked for.",
+    title: "Colour & glow",
+    text: "Hair dye that surprises, facials that leave soft glowy skin, and mani-pedi finishes clients love.",
   },
   {
-    title: "Trusted in DHA",
-    text: `Rated ${salon.rating}★ from ${salon.reviewCount} Google reviews — caring owners and friendly service are frequently praised.`,
+    title: "Trusted in Gulshan",
+    text: `Rated ${salon.rating}★ from ${salon.reviewCount} Google reviews — cooperative staff and a comfortable vibe keep people coming back.`,
   },
 ];
 
 const milestones = [
   { label: "Google rating", value: `${salon.rating}★` },
   { label: "Public reviews", value: `${salon.reviewCount}+` },
-  { label: "Focus", value: "Laser & nails" },
-  { label: "Area", value: "DHA Phase 4" },
+  { label: "Open", value: "10–10" },
+  { label: "Area", value: "Gulshan 11" },
 ];
 
 export default function AboutPage() {
@@ -36,10 +36,10 @@ export default function AboutPage() {
       <section className="bg-ink-950 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <p className="eyebrow text-amber-400 mb-4 animate-rise">Our Story</p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About Beauty Aura</h1>
+          <h1 className="font-display text-4xl md:text-6xl text-ink-50 animate-rise delay-1">About Maria&apos;s</h1>
           <div className="accent-rule w-16 mx-auto mt-6 animate-rise delay-2" />
           <p className="mt-6 text-ink-300 max-w-2xl mx-auto leading-relaxed animate-rise delay-2">
-            Laser & nail hub in DHA Phase 4, Lahore — hair, skin, nails and beauty care.
+            Energetic hair & skin care near Moon Garden — Gulshan Block 11, Karachi.
           </p>
         </div>
       </section>
@@ -48,20 +48,20 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative aspect-[4/5] overflow-hidden bg-ink-200" data-reveal="left">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/images/party.jpg")} alt="Styling at Beauty Aura Salon" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={asset("/images/party.jpg")} alt="Styling at Maria's Beauty Parlour" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-4 border border-amber-400/35 pointer-events-none" />
           </div>
           <div className="space-y-5 text-ink-700 leading-relaxed" data-reveal="right">
             <p className="eyebrow text-amber-600">Who we are</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">A neighbourhood salon in Sector CCA</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">A lively parlour on Moon Garden Street</h2>
             <p>
-              <strong className="text-ink-950">{salon.name}</strong> (Laser & Nail Hub) is in DHA Phase 4, Lahore. The salon is known for haircuts, facials, manicure & pedicure, massage, waxing and laser hair removal.
+              <strong className="text-ink-950">{salon.name}</strong> is in Block 11 Gulshan-e-Iqbal, Karachi. Known for express haircuts, colour, glow facials, bridal & party makeup, keratin, waxing and manicure-pedicure.
             </p>
             <p>
-              Guests discover Beauty Aura on Google Maps. The listing still invites owners to “Add website” — until now bookings mainly ran through WhatsApp and phone.
+              Guests find Maria&apos;s on Google Maps and Facebook. There is no dedicated website yet — bookings mainly run through WhatsApp and social.
             </p>
             <p>
-              Message <strong className="text-ink-950">{salon.phoneDisplay}</strong> on WhatsApp to reserve your appointment.
+              Message <strong className="text-ink-950">{salon.phoneDisplay}</strong> on WhatsApp and lock your appointment.
             </p>
           </div>
         </div>
@@ -82,9 +82,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-12" data-reveal>
             <p className="eyebrow text-amber-600 mb-3">How we work</p>
-            <h2 className="font-display text-3xl md:text-4xl text-ink-950">What clients come back for</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-ink-950">What keeps clients coming back</h2>
             <p className="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">
-              Public Google reviews highlight cooperative staff, tidy work and a clean salon feel.
+              Google reviews highlight speed, guidance, glow results and a comfortable environment.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
@@ -106,12 +106,12 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl text-ink-950 mb-6">What we offer</h2>
             <ul className="space-y-4">
               {[
-                "Ladies haircuts & styling",
-                "Manicure, pedicure & nail care",
-                "Facials & skin care",
-                "Massage & waxing",
-                "Laser hair removal",
-                "Party & bridal makeup",
+                "Express haircuts & styling",
+                "Hair colour, dye, keratin & protein",
+                "Glow facials & skin care",
+                "Bridal & party makeup",
+                "Manicure, pedicure & waxing",
+                "Open late — 10 AM to 10 PM",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-ink-700 text-sm border-b border-ink-200 pb-3 last:border-0">
                   <span className="text-amber-500 shrink-0">—</span>
@@ -122,7 +122,7 @@ export default function AboutPage() {
           </div>
           <div className="border border-ink-200 bg-white p-8 md:p-10" data-reveal="right">
             <p className="eyebrow text-amber-600 mb-3">Visit</p>
-            <h3 className="font-display text-2xl md:text-3xl text-ink-950">Find us in DHA Phase 4</h3>
+            <h3 className="font-display text-2xl md:text-3xl text-ink-950">Find us in Gulshan</h3>
             <p className="mt-4 text-ink-600 text-sm leading-relaxed">{salon.address.full}</p>
             <div className="mt-6 space-y-3 text-sm">
               {hours.map((item) => (
@@ -147,7 +147,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center" data-reveal="scale">
           <h2 className="font-display text-3xl md:text-4xl text-ink-950">Ready to book?</h2>
           <p className="mt-4 text-ink-600 text-sm md:text-base">
-            Message Beauty Aura on WhatsApp for hair, nails, facial or laser appointments.
+            WhatsApp Maria&apos;s for cuts, colour, glow or glam — we&apos;ll get you in.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/services/" className="btn-dark">Services & Prices</Link>

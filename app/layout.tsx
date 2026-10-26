@@ -9,11 +9,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${salon.name} | Laser & Nail Hub in DHA Phase 4, Lahore`,
+    default: `${salon.name} | Hair & Skin Care in Gulshan, Karachi`,
     template: `%s | ${salon.name}`,
   },
   description:
-    "Beauty Aura Salon Laser & Nail Hub — beauty salon in DHA Phase 4, Lahore. Rated 4.8★ on Google (46 reviews). Book on WhatsApp +92 300 4776011.",
+    "Maria's Beauty Parlour — energetic hair & skin care in Gulshan Block 11, Karachi. Rated 4.9★ on Google (160 reviews). Book on WhatsApp +92 334 8592187.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

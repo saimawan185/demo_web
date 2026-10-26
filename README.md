@@ -1,6 +1,6 @@
-# Beauty Aura Salon — Demo Website
+# Maria's Beauty Parlour — Demo Website
 
-Premium demo site for **Beauty Aura Salon Laser & Nail Hub** (DHA Phase 4, Lahore) — rated 4.8★ on Google with **no dedicated website** (Google Maps still shows “Add website”). Bookings via WhatsApp.
+Energetic demo site for **Maria's Beauty Parlour** (hair & skin care in Gulshan Block 11, Karachi) — rated 4.9★ on Google with **no dedicated website** (Facebook only). Bookings via WhatsApp.
 
 ## Live
 
@@ -10,12 +10,12 @@ Premium demo site for **Beauty Aura Salon Laser & Nail Hub** (DHA Phase 4, Lahor
 
 | | |
 |--|--|
-| **Name** | Beauty Aura Salon Laser & Nail Hub |
-| **Address** | DD, Sector CCA, DHA Phase 4, Lahore, 54000 |
-| **Phone / WhatsApp** | +92 300 4776011 (`+923004776011`) |
-| **Google rating** | 4.8★ (46 reviews) |
-| **Hours** | Mon, Wed–Sun 10:30 AM – 8:00 PM · Tue closed |
-| **Social** | WhatsApp, Instagram, Facebook, TikTok, Google Reviews |
+| **Name** | Maria's Beauty Parlour hair & skin care |
+| **Address** | Moon Garden St, Block 11 Gulshan-e-Iqbal, Karachi |
+| **Phone / WhatsApp** | +92 334 8592187 (`+923348592187`) |
+| **Google rating** | 4.9★ (160 reviews) |
+| **Hours** | Mon–Sun 10:00 AM – 10:00 PM |
+| **Social** | WhatsApp, Facebook (@mariasbeautyparlour), Instagram, TikTok, Google Reviews |
 
 Includes a floating WhatsApp button on every page.
 
